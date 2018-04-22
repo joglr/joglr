@@ -12,12 +12,13 @@ describe('detectOverlappingCharacters', () => {
     expect(!!detectOverlappingCharacters('one', 'orange')).toBe(true)
   })
   it('works', () => {
-    expect(detectOverlappingCharacters('one', 'orange')[0]).toBe('o')
+    expect(detectOverlappingCharacters('one', 'orange')[0].character).toBe('o')
   })
   it('works more', () => {
-    expect(detectOverlappingCharacters('abanana', 'orange')[2]).toBe('a')
+    expect(detectOverlappingCharacters('abanana', 'orange')[0].character).toBe('a')
+    expect(detectOverlappingCharacters('abanana', 'orange')[1].character).toBe('n')
   })
-  it('works more', () => {
-    expect(detectOverlappingCharacters('a space', 'i love')[2]).toBe(false)
+  it('works still', () => {
+    expect(detectOverlappingCharacters('a space', 'i love')).toBe(false)
   })
 })

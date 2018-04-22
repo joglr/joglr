@@ -29,7 +29,7 @@ const styles = theme => ({
   huge: {
     height: '100vh',
     position: 'relative',
-    fontSize: '9rem',
+    fontSize: '2rem',
     verticalAlign: 'middle',
     color: theme.palette.primary.contrastText,
     backgroundColor: theme.palette.primary.main
@@ -67,72 +67,83 @@ const styles = theme => ({
   fixed: {
     ...fixed,
     zIndex: 9999
+  },
+  keepWhiteSpace: {
+    whiteSpace: 'pre-wrap'
   }
 })
 
-const firstText = 'Whaaaaaa is this? I think you are crazy'
-const secondText = 'My name is Jonas'
-
-detectOverlappingCharacters(firstText, secondText) //?
 const makeContainer = (firstText, secondText) => {
   let string = firstText
   const overlapMap = detectOverlappingCharacters(firstText, secondText)
 
-  for (const charObj of overlapMap) {
-    const { position, char } = charObj
+  if (overlapMap)
+    for (const charObj of overlapMap) {
+      const { position, character } = charObj
 
-    const from =
-      overlapMap.indexOf(charObj) === 0
-        ? 0
-        : overlapMap[overlapMap.indexOf(charObj) - 1].index
+      const from =
+        overlapMap.indexOf(charObj) === 0
+          ? 0
+          : overlapMap[overlapMap.indexOf(charObj) - 1].index
 
-    string = `${string.slice(from, position - 1)} ${string.slice(
-      position + 1,
-      string.length
-    )}` //?
-  }
+      string = `${string.slice(from, position)} ${string.slice(
+        position + 1,
+        string.length
+      )}` //?
+    }
   return string
 }
 
-const makeFiller = (firstText, secondText) => {
-  let string = firstText
-  const overlapMap = detectOverlappingCharacters(firstText, secondText)
+const makeFiller = (first, second) => {
+  const max = Math.max(first.length, second.length)
+  let string = ' '.repeat(max)
 
-  for (const charObj of overlapMap) {
-    const { position, char } = charObj
+  const overlapMap = detectOverlappingCharacters(first, second)
 
-    const from =
-      overlapMap.indexOf(charObj) === 0
-        ? 0
-        : overlapMap[overlapMap.indexOf(charObj) - 1].position
+  if (overlapMap)
+    for (const charObj of overlapMap) {
+      const { position, character } = charObj
 
-    string = `${' '.repeat(from)}${char}${' '.repeat(position + 2)}` //?
-  }
+      const from =
+        overlapMap.indexOf(charObj) === 0
+          ? 0
+          : overlapMap[overlapMap.indexOf(charObj) - 1].position
+
+      const firstPart = string.slice(0, position)
+      const secondPart = string.slice(position, max)
+      string = `${firstPart}${character}${secondPart}`
+      // ' '.repeat(position)//?
+    }
+  string
+  return string
 }
 
-const App = ({ classes }) => (
-  <div className={classes.root}>
-    <div className={classes.huge}>
-      <div className={classes.centeredY}>
-        <p>
-          {makeContainer(firstText, secondText)}
-          // <span className={classes.tText}>.....</span>H<span className={classes.tText}>e</span>l<span className={classes.tText}>l</span>lll<span className={classes.tText}>o</span>!
-        </p>
+const App = ({ classes }) => {
+  const text1 = `Hello. My name is Jonas`
+  const text2 = `I make web applications`
+
+  const firstContainer = makeContainer(text1, text2)
+  const secondContainer = makeContainer(text2, text1)
+  const fixedFiller = makeFiller(text1, text2)
+  return (
+    <div className={classes.root}>
+
+      <div className={classes.huge}>
+        <div className={classes.centeredY}>
+          <p className={classes.keepWhiteSpace}>{firstContainer}</p>
+        </div>
+        <div className={joinClasses(classes.centeredY, classes.fixed)}>
+          <p className={classes.keepWhiteSpace}>{fixedFiller}</p>
+        </div>
       </div>
-      <div className={joinClasses(classes.centeredY, classes.fixed)}>
-        {makeFiller(firstText, secondText)}
-        // <span className={classes.tText}>.....</span>
-        // <span className={classes.tText}>H</span>e<span className={classes.tText}>l</span>l<span className={classes.tText}>lll</span>o
+      <div className={classes.huge}>
+        <div className={classes.centeredY}>
+          <p className={classes.keepWhiteSpace}>{secondContainer}</p>
+        </div>
       </div>
     </div>
-    <div className={classes.huge}>
-      <div className={classes.centeredY}>
-        My nam<span className={classes.tText}>e</span>{' '}
-        <span className={classes.tText}>i</span>s J<span className={classes.tText}>o</span>nas
-      </div>
-    </div>
-  </div>
-)
+  )
+}
 
 App.propTypes = {
   classes: PropTypes.object
