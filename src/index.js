@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { MuiThemeProvider } from 'material-ui/styles'
-import App from './components/App'
+import App from './components/App.jsx'
 import registerServiceWorker from './registerServiceWorker'
 import theme from './theme'
 import './index.css'
