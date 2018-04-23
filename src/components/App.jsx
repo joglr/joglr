@@ -26,26 +26,17 @@ const styles = theme => ({
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.secondary.contrastText
   },
+  fullHeight: {
+    height: '100vh'
+  },
   huge: {
-    height: '100vh',
-    position: 'relative',
-    fontSize: '2rem',
-    verticalAlign: 'middle',
-    color: theme.palette.primary.contrastText,
-    backgroundColor: theme.palette.primary.main
+    // position: 'relative',
+    fontSize: '3rem'
   },
-  themePrimary: {
-    backgroundColor: theme.palette.primary.main
-  },
-  themePrimaryContrast: {
-    backgroundColor: theme.palette.primary.contrastText
-  },
-  themePrimaryText: {
-    color: theme.palette.primary.main
-  },
-  themePrimaryContrastText: {
-    color: theme.palette.primary.contrastText
-  },
+  themePrimary: { backgroundColor: theme.palette.primary.main },
+  themePrimaryContrast: { backgroundColor: theme.palette.primary.contrastText },
+  themePrimaryText: { color: theme.palette.primary.main },
+  themePrimaryContrastText: { color: theme.palette.primary.contrastText },
   tText: {
     color: 'transparent'
   },
@@ -66,6 +57,7 @@ const styles = theme => ({
   },
   fixed: {
     ...fixed,
+    top: 0,
     zIndex: 9999
   },
   keepWhiteSpace: {
@@ -73,9 +65,9 @@ const styles = theme => ({
   }
 })
 
-const makeContainer = (firstText, secondText) => {
-  let string = firstText
-  const overlapMap = detectOverlappingCharacters(firstText, secondText)
+const makeContainer = (text1, text2) => {
+  let string = text1
+  const overlapMap = detectOverlappingCharacters(text1, text2)
 
   if (overlapMap)
     for (const charObj of overlapMap) {
@@ -94,11 +86,11 @@ const makeContainer = (firstText, secondText) => {
   return string
 }
 
-const makeFiller = (first, second) => {
-  const max = Math.max(first.length, second.length)
+const makeFiller = (text1, text2) => {
+  const max = Math.max(text1.length, text2.length)
   let string = ' '.repeat(max)
 
-  const overlapMap = detectOverlappingCharacters(first, second)
+  const overlapMap = detectOverlappingCharacters(text1, text2)
 
   if (overlapMap)
     for (const charObj of overlapMap) {
@@ -121,26 +113,38 @@ const makeFiller = (first, second) => {
 const App = ({ classes }) => {
   const text1 = `Hello. My name is Jonas`
   const text2 = `I make web applications`
-
-  const firstContainer = makeContainer(text1, text2)
-  const secondContainer = makeContainer(text2, text1)
-  const fixedFiller = makeFiller(text1, text2)
+  const text3 = `  using JavaScript`
+  detectOverlappingCharacters(text3, text1) //?
+  detectOverlappingCharacters(text3, text2) //?
+  const container1 = makeContainer(text1, text2)
+  const container2 = makeContainer(text2, text1)
+  const container3 = makeContainer(text3, text2)
+  const filler12 = makeFiller(text1, text2)
+  const filler23 = makeFiller(text2, text3)
   return (
-    <div className={classes.root}>
-
-      <div className={classes.huge}>
-        <div className={classes.centeredY}>
-          <p className={classes.keepWhiteSpace}>{firstContainer}</p>
+    <div
+      className={joinClasses(
+        classes.root,
+        classes.fullHeight,
+        classes.themePrimary,
+        classes.themePrimaryContrastText
+      )}>
+      {[ container1, container2, container3 ].map((x, key) => (
+        <div
+          {...{ key }}
+          className={joinClasses(classes.huge, classes.keepWhiteSpace)}>
+          {x}
         </div>
-        <div className={joinClasses(classes.centeredY, classes.fixed)}>
-          <p className={classes.keepWhiteSpace}>{fixedFiller}</p>
-        </div>
+      ))}
+      <div
+        className={joinClasses(
+          classes.huge,
+          classes.keepWhiteSpace,
+          classes.fixed
+        )}>
+        {filler12}
       </div>
-      <div className={classes.huge}>
-        <div className={classes.centeredY}>
-          <p className={classes.keepWhiteSpace}>{secondContainer}</p>
-        </div>
-      </div>
+      <div className={classes.fullHeight} />
     </div>
   )
 }
