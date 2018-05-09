@@ -65,86 +65,25 @@ const styles = theme => ({
   }
 })
 
-const makeContainer = (text1, text2) => {
-  let string = text1
-  const overlapMap = detectOverlappingCharacters(text1, text2)
-
-  if (overlapMap)
-    for (const charObj of overlapMap) {
-      const { position, character } = charObj
-
-      const from =
-        overlapMap.indexOf(charObj) === 0
-          ? 0
-          : overlapMap[overlapMap.indexOf(charObj) - 1].index
-
-      string = `${string.slice(from, position)} ${string.slice(
-        position + 1,
-        string.length
-      )}` //?
-    }
-  return string
-}
-
-const makeFiller = (text1, text2) => {
-  const max = Math.max(text1.length, text2.length)
-  let string = ' '.repeat(max)
-
-  const overlapMap = detectOverlappingCharacters(text1, text2)
-
-  if (overlapMap)
-    for (const charObj of overlapMap) {
-      const { position, character } = charObj
-
-      const from =
-        overlapMap.indexOf(charObj) === 0
-          ? 0
-          : overlapMap[overlapMap.indexOf(charObj) - 1].position
-
-      const firstPart = string.slice(0, position)
-      const secondPart = string.slice(position, max)
-      string = `${firstPart}${character}${secondPart}`
-      // ' '.repeat(position)//?
-    }
-  string
-  return string
-}
-
 const App = ({ classes }) => {
-  const text1 = `Hello. My name is Jonas`
-  const text2 = `I make web applications`
-  const text3 = `  using JavaScript`
-  detectOverlappingCharacters(text3, text1) //?
-  detectOverlappingCharacters(text3, text2) //?
-  const container1 = makeContainer(text1, text2)
-  const container2 = makeContainer(text2, text1)
-  const container3 = makeContainer(text3, text2)
-  const filler12 = makeFiller(text1, text2)
-  const filler23 = makeFiller(text2, text3)
+  const text1 = `Hi, I'm Jonas. I make web applications, `
+  const text2 = ``
+  const text3 = <span>using <strong>modern</strong> web technologies.</span>
   return (
     <div
       className={joinClasses(
         classes.root,
         classes.fullHeight,
         classes.themePrimary,
-        classes.themePrimaryContrastText
+        classes.themePrimaryContrastText,
       )}>
-      {[ container1, container2, container3 ].map((x, key) => (
+      {[ text1, text2, text3 ].map((x, key) => (
         <div
           {...{ key }}
           className={joinClasses(classes.huge, classes.keepWhiteSpace)}>
           {x}
         </div>
       ))}
-      <div
-        className={joinClasses(
-          classes.huge,
-          classes.keepWhiteSpace,
-          classes.fixed
-        )}>
-        {filler12}
-      </div>
-      <div className={classes.fullHeight} />
     </div>
   )
 }
