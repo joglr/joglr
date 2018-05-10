@@ -6,7 +6,8 @@ import Typography from 'material-ui/Typography'
 import LocationIcon from '@material-ui/icons/LocationOn'
 import DownIcon from '@material-ui/icons/KeyboardArrowDown'
 import Tooltip from 'material-ui/Tooltip'
-import BackgroundParticles from './BackgroundParticles'
+import BackgroundParticles from './BackgroundParticles.jsx'
+import Technologies from './Technologies.jsx'
 import setColorOpacity from '../helpers/set-color-opacity'
 import 'typeface-roboto'
 
@@ -23,14 +24,15 @@ const styles = theme => ({
   section: {
     minHeight: '100vh',
     '&:first-child': {
-      backgroundColor: setColorOpacity(theme.palette.primary.main, 0.5),
+      backgroundColor: 'transparent',
       minHeight: `calc(100vh - ${topBorderSize * theme.spacing.unit}px)`
     },
     '&:not(:first-child)': {
       boxSizing: 'border-box',
       boxShadow: `0 0 ${theme.spacing.unit}px 0 black`,
       borderTop: `${topBorderSize * theme.spacing.unit}px ${theme.palette
-        .secondary.main} solid`
+        .secondary.main} solid`,
+      backgroundColor: setColorOpacity(theme.palette.primary.main, 0.85)
     }
   },
   container: {
@@ -65,6 +67,7 @@ const styles = theme => ({
   w500: {
     fontWeight: 500
   },
+  paragraph: {},
   em: {
     fontStyle: 'italic'
   },
@@ -156,7 +159,7 @@ const App = ({ classes }) => {
               classes.w100,
               classes.display4
             )}>
-            Hi, I'm Jonas!
+            Hi, I'm Jonas
           </Typography>
           <Typography
             variant="display3"
@@ -171,7 +174,7 @@ const App = ({ classes }) => {
               <LocationIcon
                 className={joinClasses(classes.textIcon, classes.leftIcon)}
               />
-              <strong className={classes.w400}>Copenhagen, Denmark.</strong>
+              <strong className={classes.w400}>Copenhagen, Denmark</strong>
             </p>
           </Typography>
           <div className={classes.textCentered}>
@@ -198,11 +201,10 @@ const App = ({ classes }) => {
               classes.w300,
               classes.display3
             )}>
-            <p>
+            <p className={classes.paragraph}>
               I make <strong className={classes.w400}>web applications</strong>,
-              using state-of-the-art technologies.
-            </p>
-            <p>
+              using these state-of-the-art technologies:
+              <Technologies />
               <span>
                 If you have any questions, feel free to get in touch with me{' '}
               </span>
@@ -229,7 +231,7 @@ const App = ({ classes }) => {
                   here
                 </a>
               </Tooltip>
-              <span>.</span>
+              <span>!</span>
             </p>
           </Typography>
         </div>

@@ -1,20 +1,14 @@
-// import dat from 'dat-gui'
 import debounce from 'lodash.debounce'
 import getElPosition from './get-el-position'
-
-var navSizeSmall = 54,
-  navSizeLarge = 64
 
 const DEBUG = window.location.pathname === 'localhost'
 
 if (DEBUG) console.clear()
 
-let canvas
 let W
 let H
 let Particles = []
 let ctx
-let gui
 let isFirstFrame = true
 let pixelAspectRatio = window.devicePixelRatio || 1
 
@@ -85,7 +79,7 @@ const _init = (canvas, window, document, options) => {
 const _randomBetween = (min, max, ceil) =>
   Math[ceil ? 'ceil' : 'round'](Math.random() * (max - min) + min)
 
-const _choose = what => what[Math.floor(Math.random() * what.length)]
+// const _choose = what => what[Math.floor(Math.random() * what.length)]
 
 const _fillCanvas = function(fillColor = params.fillColor) {
   if (typeof fillColor === 'object')
@@ -139,45 +133,6 @@ const _bindHandlers = canvas => {
       t.addEventListener(e, h)
     }).apply(this, handler)
   })
-}
-
-const _makeGUI = canvas => {
-  var physics = gui.addFolder('Physics')
-
-  physics.add(params, 'gravity').min(-1).max(1)
-  physics.add(params, 'bouncePenalty').min(0).max(0.1)
-  physics.add(params, 'freeze').onFinishChange(function() {
-    if (!params.freeze) requestAnimationFrame(_update(canvas))
-  })
-  physics.add(params, 'mouse')
-
-  var style = gui.addFolder('Style')
-
-  style.addColor(params, 'particleColor')
-  style.add(params, 'fill')
-  style
-    .add(params, 'rainbow')
-    .onFinishChange(() =>
-      Particles.forEach(particle => (particle.color = params.particleColor))
-    )
-  style.add(params, 'trace', 0, 1)
-  style.add(params, 'text')
-
-  var gen = gui.addFolder('Generate New')
-
-  gen.add(params, 'count', 0, 500).onFinishChange(_reset)
-  gen.add(params, 'minSize', 1, 20).onFinishChange(_reset)
-  gen.add(params, 'maxSize', 1, 50).onFinishChange(_reset)
-  gen.add(params, 'initialVelocity', 0, 5).onFinishChange(_reset)
-  gen.add(params, 'margin').onFinishChange(_reset)
-
-  params.clearParticles = function() {
-    Particles = []
-    _fillCanvas()
-  }
-
-  gui.add(params, 'clearParticles')
-  gui.close()
 }
 
 const _reset = () => {
@@ -317,25 +272,25 @@ const _Particle = function(x, y) {
 
           // make into unit vector
 
-          var normX = normX / distance
-          var normY = normY / distance
+          var normXUnit = normX / distance
+          var normYUnit = normY / distance
 
           // Get projection of movement vectors onto normal
           // (Dot prod each with norm)
 
-          var proj1 = this.vx * normX + this.vy * normY,
-            proj2 = p.vx * normX + p.vy * normY
+          var proj1 = this.vx * normXUnit + this.vy * normYUnit,
+            proj2 = p.vx * normXUnit + p.vy * normYUnit
 
           // Now, factor in impulse, derived from
           // Conservation of Energy / Conservation of Momentum
 
           var impulse = 2 * (proj1 - proj2) / (this.mass + p.mass)
 
-          this.vx = this.vx - impulse * p.mass * normX
-          this.vy = this.vy - impulse * p.mass * normY
+          this.vx = this.vx - impulse * p.mass * normXUnit
+          this.vy = this.vy - impulse * p.mass * normYUnit
 
-          p.vx = p.vx + impulse * this.mass * normX
-          p.vy = p.vy + impulse * this.mass * normY
+          p.vx = p.vx + impulse * this.mass * normXUnit
+          p.vy = p.vy + impulse * this.mass * normYUnit
 
           this.reduceVelocity(0.999)
         }
