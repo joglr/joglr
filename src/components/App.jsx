@@ -38,10 +38,20 @@ const styles = theme => ({
     margin: 'auto'
   },
   typographyWrapper: {
-    padding: '2rem'
+    padding: '1rem'
   },
   noUserSelect: {
     userSelect: 'none'
+  },
+  display4: {
+    '@media (max-width: 960px)': {
+      fontSize: 9 * theme.spacing.unit
+    }
+  },
+  display3: {
+    '@media (max-width: 960px)': {
+      fontSize: 6 * theme.spacing.unit
+    }
   },
   w100: {
     fontWeight: 100
@@ -134,7 +144,6 @@ const App = ({ classes }) => {
           classes.section,
           classes.firstSection,
           classes.centeredY,
-          classes.themePrimary,
           classes.themePrimaryContrastText
         )}>
         <div
@@ -144,16 +153,18 @@ const App = ({ classes }) => {
             className={joinClasses(
               classes.themePrimaryContrastText,
               classes.noUserSelect,
-              classes.w300
+              classes.w100,
+              classes.display4
             )}>
-            <span className={classes.w100}>Hi, I'm Jonas!</span>
+            Hi, I'm Jonas!
           </Typography>
           <Typography
             variant="display3"
             className={joinClasses(
               classes.themePrimaryContrastText,
               classes.noUserSelect,
-              classes.w300
+              classes.w300,
+              classes.display3
             )}>
             <p>
               I'm a self-taught developer and creator based in{' '}
@@ -184,12 +195,12 @@ const App = ({ classes }) => {
             className={joinClasses(
               classes.themePrimaryContrastText,
               classes.noUserSelect,
-              classes.w300
+              classes.w300,
+              classes.display3
             )}>
             <p>
               I make <strong className={classes.w400}>web applications</strong>,
-              using state-of-the-art technologies, provided by the diverse, open
-              source community.
+              using state-of-the-art technologies.
             </p>
             <p>
               <span>
