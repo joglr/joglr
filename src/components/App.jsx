@@ -52,7 +52,7 @@ const styles = theme => ({
   },
   display3: {
     '@media (max-width: 960px)': {
-      fontSize: 6 * theme.spacing.unit
+      fontSize: 5 * theme.spacing.unit
     }
   },
   w100: {
