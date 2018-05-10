@@ -3,9 +3,9 @@
   "version": "1.1.1",
   "private": true,
   "dependencies": {
-    "@material-ui/icons": "^1.0.0-beta.42",
+    "@material-ui/icons": "^1.0.0-beta.43",
     "lodash.debounce": "^4.0.8",
-    "material-ui": "^1.0.0-beta.42",
+    "material-ui": "^1.0.0-beta.47",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
