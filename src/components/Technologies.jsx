@@ -1,49 +1,61 @@
 import React from 'react'
 import { withStyles } from 'material-ui/styles'
 import Tooltip from 'material-ui/Tooltip'
-import ECMAScriptLogo from './../media/ecmascript-logo.svg'
-import webpackLogo from './../media/webpack-logo.svg'
-import reactLogo from './../media/react-logo.svg'
-import reduxLogo from './../media/redux-logo.svg'
-import leafletLogo from './../media/leaflet-logo.svg'
-import materialUILogo from './../media/material-ui-logo.svg'
-import materialDesignLogo from './../media/material-design-logo.svg'
+import ECMAScript from './../media/ecmascript-logo.svg'
+import nodejs from './../media/nodejs-logo.svg'
+import npm from './../media/npm-logo.svg'
+import webpack from './../media/webpack-logo.svg'
+import react from './../media/react-logo.svg'
+import redux from './../media/redux-logo.svg'
+import leaflet from './../media/leaflet-logo.svg'
+import materialUI from './../media/material-ui-logo.svg'
+import materialDesign from './../media/material-design-logo.svg'
 
 const technologies = [
   {
+    title: 'Material Design',
+    link: 'https://material.io',
+    logo: materialDesign
+  },
+  {
     title: 'ECMAScript',
-    link: 'https://www.wikiwand.com/en/ECMAScript',
-    logo: ECMAScriptLogo
+    link: 'https://en.wikipedia.org/wiki/ECMAScript',
+    logo: ECMAScript
+  },
+  {
+    title: 'NodeJS',
+    link: 'https://nodejs.org',
+    logo: nodejs
+  },
+  {
+    title: 'Node Package Manager',
+    link: 'https://www.npmjs.com',
+    logo: npm
   },
   {
     title: 'Webpack',
     link: 'https://webpack.js.org',
-    logo: webpackLogo
+    logo: webpack
   },
   {
     title: 'React',
     link: 'https://reactjs.org',
-    logo: reactLogo
+    logo: react
   },
   {
     title: 'Redux',
     link: 'https://redux.js.org',
-    logo: reduxLogo
+    logo: redux
   },
   {
     title: 'Material UI',
     link: 'https://www.material-ui.com',
-    logo: materialUILogo
-  },
-  {
-    title: 'Material Design',
-    link: 'https://material.io',
-    logo: materialDesignLogo
+    logo: materialUI
   },
   {
     title: 'Leaflet',
     link: 'https://leafletjs.com',
-    logo: leafletLogo
+    logo: leaflet
   }
 ]
 
