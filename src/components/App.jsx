@@ -108,6 +108,9 @@ const styles = theme => ({
   leftIcon: {
     // marginRight: '0.1em'
   },
+  noWrap: {
+    whiteSpace: 'nowrap'
+  },
   centeredX: {
     ...absolute,
     left: '50%',
@@ -170,10 +173,14 @@ const App = ({ classes }) => {
             )}>
             <p>
               I'm a self-taught developer and creator based in{' '}
-              <LocationIcon
-                className={joinClasses(classes.textIcon, classes.leftIcon)}
-              />
-              <strong className={classes.w400}>Copenhagen, Denmark</strong>
+              <strong className={classes.w400}>
+                <span className={classes.noWrap}>
+                  <LocationIcon
+                    className={joinClasses(classes.textIcon, classes.leftIcon)}
+                  />Copenhagen
+                </span>
+                <span>, Denmark</span>
+              </strong>
             </p>
           </Typography>
           <div className={classes.textCentered}>
