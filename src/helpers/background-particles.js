@@ -8,7 +8,6 @@ if (DEBUG) console.clear()
 let W
 let H
 let Particles = []
-let ctx
 let isFirstFrame = true
 let pixelAspectRatio = window.devicePixelRatio || 1
 
@@ -67,13 +66,13 @@ const _init = (canvas, window, document, options) => {
   canvas = canvas || document.getElementById('canvas') || 0
   if (canvas === 0) throw Error('canvas missing')
 
-  ctx = canvas.getContext('2d')
+  const ctx = canvas.getContext('2d')
 
-  _bindHandlers(canvas)
-  _resizeHandler(canvas)()
-  _fillCanvas(canvas)
+  _bindHandlers(canvas, ctx)
+  _resizeHandler(canvas, ctx)()
+  _fillCanvas(ctx)
   _generateParticles(canvas)
-  requestAnimationFrame(_update(canvas))
+  requestAnimationFrame(_update(canvas, ctx))
 }
 
 const _randomBetween = (min, max, ceil) =>
@@ -81,7 +80,7 @@ const _randomBetween = (min, max, ceil) =>
 
 // const _choose = what => what[Math.floor(Math.random() * what.length)]
 
-const _fillCanvas = function(fillColor = params.fillColor) {
+const _fillCanvas = (ctx, fillColor = params.fillColor) => {
   if (typeof fillColor === 'object')
     fillColor = `hsla(${fillColor.h}, ${fillColor.s * 100}%, ${fillColor.l *
       100}%, ${1 - params.trace})`
@@ -92,11 +91,11 @@ const _fillCanvas = function(fillColor = params.fillColor) {
   return fillColor
 }
 
-const _clearCanvas = () => ctx.clearRect(0, 0, W, H)
+const _clearCanvas = ctx => ctx.clearRect(0, 0, W, H)
 
-const _resizeHandler = canvas => () => {
-  _clearCanvas()
-  _fillCanvas()
+const _resizeHandler = (canvas, ctx) => () => {
+  _clearCanvas(ctx)
+  _fillCanvas(ctx)
 
   canvas.removeAttribute('width')
   canvas.removeAttribute('height')
@@ -121,11 +120,11 @@ const _canvasDownHandler = canvas => e =>
       )
     : false
 
-const _bindHandlers = canvas => {
+const _bindHandlers = (canvas, ctx) => {
   var handlers = [
-    [ canvas.parentElement, 'mousedown', _canvasDownHandler(canvas) ],
-    [ canvas.parentElement, 'touchstart', _canvasDownHandler(canvas) ],
-    [ window, 'resize', debounce(_resizeHandler(canvas), 200) ]
+    [ canvas.parentElement, 'mousedown', _canvasDownHandler(canvas, ctx) ],
+    [ canvas.parentElement, 'touchstart', _canvasDownHandler(canvas, ctx) ],
+    [ window, 'resize', debounce(_resizeHandler(canvas, ctx), 200) ]
   ]
 
   handlers.forEach(handler => {
@@ -149,17 +148,17 @@ const _generateParticles = () => {
 
 export const _flipGravity = () => (params.gravity *= -1)
 
-const _update = canvas => () => {
+const _update = (canvas, ctx) => () => {
   params.hue += params.hueIncrement
   if (params.hue >= 360) params.hue = 0
 
-  _fillCanvas()
+  _fillCanvas(ctx)
 
   if (!params.freeze) {
     Particles.forEach(p => {
       p.applyVelocity()
       p.detectCollissions()
-      p.paint()
+      p.paint(ctx)
     })
   }
 
@@ -168,7 +167,7 @@ const _update = canvas => () => {
     canvas.style.opacity = 1
   }
 
-  requestAnimationFrame(_update(canvas))
+  requestAnimationFrame(_update(canvas, ctx))
 }
 
 const _Particle = function(x, y) {
@@ -361,7 +360,7 @@ const _Particle = function(x, y) {
     }
   }
 
-  this.paint = () => {
+  this.paint = ctx => {
     var drawMethod = params.fill === true ? 'fill' : 'stroke'
 
     ctx.beginPath()
