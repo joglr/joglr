@@ -1,15 +1,15 @@
 import React from 'react'
 import { withStyles } from 'material-ui/styles'
 import Tooltip from 'material-ui/Tooltip'
-import ECMAScript from './../media/ecmascript-logo.svg'
-import nodejs from './../media/nodejs-logo.svg'
-import npm from './../media/npm-logo.svg'
-import webpack from './../media/webpack-logo.svg'
-import react from './../media/react-logo.svg'
-import redux from './../media/redux-logo.svg'
-import leaflet from './../media/leaflet-logo.svg'
-import materialUI from './../media/material-ui-logo.svg'
-import materialDesign from './../media/material-design-logo.svg'
+import ECMAScript from './../media/ecmascript-logo.jsx'
+import nodejs from './../media/nodejs-logo.jsx'
+import npm from './../media/npm-logo.jsx'
+import webpack from './../media/webpack-logo.jsx'
+import react from './../media/react-logo.jsx'
+import redux from './../media/redux-logo.jsx'
+import leaflet from './../media/leaflet-logo.jsx'
+import materialUI from './../media/material-ui-logo.jsx'
+import materialDesign from './../media/material-design-logo.jsx'
 
 const technologies = [
   {
@@ -78,10 +78,12 @@ const styles = theme => ({
 const Technologies = ({ classes }) => (
   <div>
     <div className={classes.root}>
-      {technologies.map((entry, key) => (
-        <Tooltip key={key} title={entry.title} placement="top">
-          <a href={entry.link} target="_blank" rel="noopener noreferrer">
-            <img className={classes.logoImg} src={entry.logo} alt={entry.title} />
+      {technologies.map(({ title, link, logo: Logo }, key) => (
+        <Tooltip key={key} title={title} placement="top">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <div className={classes.logoImg}>
+              <Logo style={{ height: '100%' }} />
+            </div>
           </a>
         </Tooltip>
       ))}
