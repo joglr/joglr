@@ -67,7 +67,6 @@ const styles = theme => ({
   w500: {
     fontWeight: 500
   },
-  paragraph: {},
   em: {
     fontStyle: 'italic'
   },
@@ -201,38 +200,36 @@ const App = ({ classes }) => {
               classes.w300,
               classes.display3
             )}>
-            <p className={classes.paragraph}>
-              I make <strong className={classes.w400}>web applications</strong>,
-              using these state-of-the-art technologies:
-              <Technologies />
-              <span>
-                If you have any questions, feel free to get in touch with me{' '}
-              </span>
-              <Tooltip title="E-mail">
-                <a
-                  href="mailto:jonas.g.roessum@gmail.com"
-                  className={joinClasses(
-                    classes.themeSecondaryText,
-                    classes.link
-                  )}>
-                  here
-                </a>
-              </Tooltip>
-              <span> or </span>
-              <Tooltip title="Twitter">
-                <a
-                  href="https://twitter.com/intent/tweet?screen_name=jonasroessum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={joinClasses(
-                    classes.themeSecondaryText,
-                    classes.link
-                  )}>
-                  here
-                </a>
-              </Tooltip>
-              <span>!</span>
-            </p>
+            I make <strong className={classes.w400}>web applications</strong>,
+            using these state-of-the-art technologies:
+            <Technologies />
+            <span>
+              If you have any questions, feel free to get in touch with me{' '}
+            </span>
+            <Tooltip title="E-mail">
+              <a
+                href="mailto:jonas.g.roessum@gmail.com"
+                className={joinClasses(
+                  classes.themeSecondaryText,
+                  classes.link
+                )}>
+                here
+              </a>
+            </Tooltip>
+            <span> or </span>
+            <Tooltip title="Twitter">
+              <a
+                href="https://twitter.com/intent/tweet?screen_name=jonasroessum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={joinClasses(
+                  classes.themeSecondaryText,
+                  classes.link
+                )}>
+                here
+              </a>
+            </Tooltip>
+            <span>!</span>
           </Typography>
         </div>
       </section>
