@@ -6,6 +6,9 @@ import Typography from 'material-ui/Typography'
 import LocationIcon from '@material-ui/icons/LocationOn'
 import DownIcon from '@material-ui/icons/KeyboardArrowDown'
 import Tooltip from 'material-ui/Tooltip'
+import BackgroundParticles from './BackgroundParticles'
+import setColorOpacity from '../helpers/set-color-opacity'
+import 'typeface-roboto'
 
 const absolute = {
   position: 'absolute'
@@ -20,6 +23,7 @@ const styles = theme => ({
   section: {
     minHeight: '100vh',
     '&:first-child': {
+      backgroundColor: setColorOpacity(theme.palette.primary.main, 0.5),
       minHeight: `calc(100vh - ${topBorderSize * theme.spacing.unit}px)`
     },
     '&:not(:first-child)': {
@@ -219,6 +223,7 @@ const App = ({ classes }) => {
           </Typography>
         </div>
       </section>
+      <BackgroundParticles />
     </div>
   )
 }
