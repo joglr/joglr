@@ -4,6 +4,7 @@ import { MuiThemeProvider } from 'material-ui/styles'
 import App from './components/App.jsx'
 import registerServiceWorker from './registerServiceWorker'
 import theme from './theme'
+import './helpers/analytics'
 import './index.css'
 
 ReactDOM.render(
