@@ -70,8 +70,8 @@ const styles = theme => ({
   logoImg: {
     height: 10 * theme.spacing.unit,
     margin: 1.5 * theme.spacing.unit,
-    filter: `drop-shadow(0 ${theme.spacing.unit}px ${theme.spacing
-      .unit}px hsla(0, 0%, 0%, 0.2))`
+    filter: `drop-shadow(0 ${theme.spacing.unit / 2}px ${theme.spacing
+      .unit / 2}px hsla(0, 0%, 0%, 0.3))`
   }
 })
 
