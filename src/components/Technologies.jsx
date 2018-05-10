@@ -69,7 +69,7 @@ const Technologies = ({ classes }) => (
       {technologies.map((entry, key) => (
         <Tooltip key={key} title={entry.title} placement="top">
           <a href={entry.link} target="_blank" rel="noopener noreferrer">
-            <img className={classes.logoImg} src={entry.logo} />
+            <img className={classes.logoImg} src={entry.logo} alt={entry.title} />
           </a>
         </Tooltip>
       ))}

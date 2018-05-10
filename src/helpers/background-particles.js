@@ -135,7 +135,7 @@ const _bindHandlers = canvas => {
   })
 }
 
-const _reset = () => {
+export const _reset = () => {
   Particles = []
 
   _fillCanvas()
@@ -147,7 +147,7 @@ const _generateParticles = () => {
     Particles[Particles.push(new _Particle()) - 1].randomPosition()
 }
 
-const _flipGravity = () => (params.gravity *= -1)
+export const _flipGravity = () => (params.gravity *= -1)
 
 const _update = canvas => () => {
   params.hue += params.hueIncrement
