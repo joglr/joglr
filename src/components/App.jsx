@@ -142,7 +142,7 @@ const styles = theme => ({
   themeSecondaryContrastText: { color: theme.palette.secondary.contrastText }
 })
 
-const App = ({ classes }) => {
+const App = ({ classes, ReactGA }) => {
   return (
     <div className={classes.root}>
       <section

@@ -4,10 +4,16 @@ import { MuiThemeProvider } from 'material-ui/styles'
 import App from './components/App.jsx'
 import registerServiceWorker from './registerServiceWorker'
 import theme from './theme'
-import './helpers/analytics'
+import ReactGA from 'react-ga'
 import './index.css'
 
+ReactGA.initialize('UA-34976555-1')
+ReactGA.pageview(window.location.pathname + window.location.search)
+
 ReactDOM.render(
-  <MuiThemeProvider {...{theme}}><App />
-  </MuiThemeProvider>, document.getElementById('root'))
+  <MuiThemeProvider {...{ theme }}>
+    <App ReactGA={ReactGA} />
+  </MuiThemeProvider>,
+  document.getElementById('root')
+)
 registerServiceWorker()
