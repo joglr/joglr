@@ -33,8 +33,8 @@ const Logo = props => (
       y2="1478.166"
       gradientUnits="userSpaceOnUse"
       gradientTransform="rotate(9.6 1169.206 -709.023)">
-      <stop offset="0" stop-color="#74B844" />
-      <stop offset="1" stop-color="#4A9634" />
+      <stop offset="0" stopColor="#74B844" />
+      <stop offset="1" stopColor="#4A9634" />
     </linearGradient>
     <path
       fill="url(#b)"
