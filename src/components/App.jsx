@@ -5,11 +5,12 @@ import joinClasses from './../helpers/join-classes'
 import Typography from 'material-ui/Typography'
 import LocationIcon from '@material-ui/icons/LocationOn'
 import DownIcon from '@material-ui/icons/KeyboardArrowDown'
-import Tooltip from 'material-ui/Tooltip'
-import BackgroundParticles from './BackgroundParticles.jsx'
-import Technologies from './Technologies.jsx'
 import setColorOpacity from '../helpers/set-color-opacity'
 import 'typeface-roboto'
+import asyncComponent from './../helpers/asyncComponent'
+
+const AsyncBackgroundParticles = asyncComponent(() => import('./BackgroundParticles.jsx'))
+const AsyncAbout = asyncComponent(() => import('./About.jsx'))
 
 const absolute = {
   position: 'absolute'
@@ -190,57 +191,8 @@ const App = ({ classes }) => {
           </div>
         </div>
       </section>
-      <section
-        className={joinClasses(
-          classes.section,
-          classes.centeredY,
-          // classes.themePrimary,
-          classes.themePrimaryContrastText
-        )}>
-        <div
-          className={joinClasses(classes.typographyWrapper, classes.container)}>
-          <Typography
-            variant="display3"
-            className={joinClasses(
-              classes.themePrimaryContrastText,
-              classes.noUserSelect,
-              classes.w300,
-              classes.display3
-            )}>
-            I make <strong className={classes.w400}>web applications</strong>,
-            using these state-of-the-art technologies:
-            <Technologies />
-            <span>
-              If you have any questions, feel free to get in touch with me{' '}
-            </span>
-            <Tooltip title="E-mail">
-              <a
-                href="mailto:jonas.g.roessum@gmail.com"
-                className={joinClasses(
-                  classes.themeSecondaryText,
-                  classes.link
-                )}>
-                here
-              </a>
-            </Tooltip>
-            <span> or </span>
-            <Tooltip title="Twitter">
-              <a
-                href="https://twitter.com/intent/tweet?screen_name=jonasroessum"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={joinClasses(
-                  classes.themeSecondaryText,
-                  classes.link
-                )}>
-                here
-              </a>
-            </Tooltip>
-            <span>!</span>
-          </Typography>
-        </div>
-      </section>
-      <BackgroundParticles />
+      <AsyncAbout classes={classes} ReactGA={ReactGA} />
+      <AsyncBackgroundParticles />
     </div>
   )
 }
