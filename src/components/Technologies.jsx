@@ -67,11 +67,12 @@ const styles = theme => ({
     justifyContent: 'center',
     width: 'auto'
   },
-  logoImg: {
+  logoLink: {
     height: 10 * theme.spacing.unit,
     margin: 1.5 * theme.spacing.unit,
     filter: `drop-shadow(0 ${theme.spacing.unit / 2}px ${theme.spacing.unit /
-      2}px hsla(0, 0%, 0%, 0.3))`
+      2}px hsla(0, 0%, 0%, 0.3))`,
+    fontSize: 0
   }
 })
 
@@ -81,15 +82,15 @@ const Technologies = ({ classes, ReactGA }) => (
       {technologies.map(({ title, link, logo: Logo }, key) => (
         <Tooltip key={key} title={title} placement="top">
           <ReactGA.OutboundLink
+            className={classes.logoLink}
             eventLabel={'technology.' + title}
             to={link}
             target="_blank"
             rel="noopener noreferrer">
-            <div className={classes.logoImg}>
-              <Logo style={{ height: '100%' }}>
-                <title>Visit {title}</title>
-              </Logo>
-            </div>
+            Visit {title}
+            <Logo style={{ height: '100%' }}>
+              <title>Visit {title}</title>
+            </Logo>
           </ReactGA.OutboundLink>
         </Tooltip>
       ))}
