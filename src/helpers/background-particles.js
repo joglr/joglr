@@ -27,18 +27,14 @@ let params = {
 
   // Gravity factor (0 for microgravity)
 
-  gravity: 0.3 * (Math.floor(Math.random() * 2) - 0.5) * 2,
-
-  // Text to draw in particle (optional)
-
-  text: '',
+  gravity: [ 0, 0 ],
 
   // Margin to generate particles within (does not affect real boundaries)
 
   margin: 20,
 
   mouse: true,
-  bouncePenalty: -0.5, // reduce or increase velocity, when bouncing with something.
+  bouncePenalty: -1, // reduce or increase velocity, when bouncing with something.
   fill: true,
   // trace: 0.9,
   trace: Math.min(Math.pow(Math.random(), 2) + 0.1, 0.9),
@@ -48,13 +44,7 @@ let params = {
   fillColor: '#ffffff',
   // fillColor: "#692c90",
 
-  useConnectedColor: false,
-
-  particleColor: '#69f0ae',
-
-  rainbow: true,
-  hue: 100,
-  hueIncrement: 4
+  particleColor: '#69f0ae'
 }
 
 const _init = (canvas, window, document, options) => {
@@ -68,9 +58,8 @@ const _init = (canvas, window, document, options) => {
 
   const ctx = canvas.getContext('2d')
 
-  _bindHandlers(canvas, ctx)
-  _resizeHandler(canvas, ctx)()
-  _fillCanvas(ctx)
+  _bindHandlers(document, canvas, ctx)
+  _resizeHandler(document, canvas, ctx)()
   _generateParticles(canvas)
   requestAnimationFrame(_update(canvas, ctx))
 }
@@ -80,28 +69,15 @@ const _randomBetween = (min, max, ceil) =>
 
 // const _choose = what => what[Math.floor(Math.random() * what.length)]
 
-const _fillCanvas = (ctx, fillColor = params.fillColor) => {
-  if (typeof fillColor === 'object')
-    fillColor = `hsla(${fillColor.h}, ${fillColor.s * 100}%, ${fillColor.l *
-      100}%, ${1 - params.trace})`
-
-  ctx.fillStyle = fillColor
-  ctx.fillRect(0, 0, W, H)
-
-  return fillColor
-}
-
 const _clearCanvas = ctx => ctx.clearRect(0, 0, W, H)
 
-const _resizeHandler = (canvas, ctx) => () => {
+const _resizeHandler = (document, canvas, ctx) => () => {
   _clearCanvas(ctx)
-  _fillCanvas(ctx)
-
+  console.log('resized')
   canvas.removeAttribute('width')
   canvas.removeAttribute('height')
-  canvas.style.width = 'auto'
-  canvas.style.height = '100vh'
-
+  canvas.style.width = '100%'
+  canvas.style.height = '100%'
   W = canvas.clientWidth
   H = canvas.clientHeight
 
@@ -120,11 +96,11 @@ const _canvasDownHandler = canvas => e =>
       )
     : false
 
-const _bindHandlers = (canvas, ctx) => {
+const _bindHandlers = (document, canvas, ctx) => {
   var handlers = [
     [ canvas.parentElement, 'mousedown', _canvasDownHandler(canvas, ctx) ],
     [ canvas.parentElement, 'touchstart', _canvasDownHandler(canvas, ctx) ],
-    [ window, 'resize', debounce(_resizeHandler(canvas, ctx), 200) ]
+    [ window, 'resize', debounce(_resizeHandler(document, canvas, ctx), 200) ]
   ]
 
   handlers.forEach(handler => {
@@ -137,7 +113,7 @@ const _bindHandlers = (canvas, ctx) => {
 export const _reset = () => {
   Particles = []
 
-  _fillCanvas()
+  _clearCanvas()
   _generateParticles()
 }
 
@@ -146,18 +122,13 @@ const _generateParticles = () => {
     Particles[Particles.push(new _Particle()) - 1].randomPosition()
 }
 
-export const _flipGravity = () => (params.gravity *= -1)
-
 const _update = (canvas, ctx) => () => {
-  params.hue += params.hueIncrement
-  if (params.hue >= 360) params.hue = 0
-
-  _fillCanvas(ctx)
+  _clearCanvas(ctx)
 
   if (!params.freeze) {
     Particles.forEach(p => {
       p.applyVelocity()
-      p.detectCollissions()
+      p.detectCollisions()
       p.paint(ctx)
     })
   }
@@ -174,7 +145,6 @@ const _Particle = function(x, y) {
   if (x) this.x = x
   if (y) this.y = y
 
-  this.color = params.particleColor
   this.mass = _randomBetween(params.minSize, params.maxSize, true)
 
   // Unique ID
@@ -217,7 +187,8 @@ const _Particle = function(x, y) {
     this.x += this.vx
     this.y += this.vy
 
-    this.vy += params.gravity
+    this.vx += params.gravity[0]
+    this.vy += params.gravity[1]
   }
 
   this.reduceVelocity = factor => {
@@ -225,16 +196,23 @@ const _Particle = function(x, y) {
     this.vy *= factor
   }
 
-  this.detectCollissions = () => {
-    var hasBounced = false
+  this.detectCollisions = () => {
+    const radius = this.getRadius()
+    let hasBounced = false
 
     // Invert initialVelocity, if it collides with a side
 
-    if (this.x + this.getRadius() > W || this.x - this.getRadius() < 0) {
+    if (
+      this.x + radius > W - params.margin ||
+      this.x - radius < 0 + params.margin
+    ) {
       this.vx = this.vx * -1 * (1 - 0.05) + 0.05
       hasBounced = true
     }
-    if (this.y + this.getRadius() > H || this.y - this.getRadius() < 0) {
+    if (
+      this.y + radius > H - params.margin ||
+      this.y - radius < 0 + params.margin
+    ) {
       this.vy = this.vy * -1 * (1 - 0.05) + 0.05
       hasBounced = true
     }
@@ -244,26 +222,21 @@ const _Particle = function(x, y) {
 
     // Correct particle, if it is moving out of the canvas bounds
 
-    if (this.x + this.getRadius() > W) this.x = W - this.getRadius()
-    else if (this.x - this.getRadius() < 0) this.x = this.getRadius()
+    if (this.x + radius > W - params.margin) this.x = W - radius - params.margin
+    else if (this.x - radius < 0 + params.margin)
+      this.x = radius + params.margin
 
-    if (this.y + this.getRadius() > H) this.y = H - this.getRadius()
-    else if (this.y - this.getRadius() < 0) this.y = this.getRadius()
+    if (this.y + radius > H - params.margin) this.y = H - radius - params.margin
+    else if (this.y - radius < 0 + params.margin)
+      this.y = radius + params.margin
 
-    // Chedk for collissions and apply the appropriate initialVelocity
-
-    var hasCollided = false
+    // Check for collisions and apply the appropriate initialVelocity
 
     Particles.forEach(p => {
       if (this.fingerprint !== p.fingerprint) {
         var distance = this.distanceTo(p)
 
         if (distance <= this.getRadius() + p.getRadius()) {
-          hasCollided = true
-
-          if (params.useConnectedColor === true)
-            p.color = `hsla(${params.hue}, 100%, 50%, .5)`
-
           // Find normal from other to me
 
           var normX = this.x - p.x
@@ -295,10 +268,6 @@ const _Particle = function(x, y) {
         }
       }
     }) // end of forEach(p2 => ...)
-
-    if (hasCollided !== true) {
-      this.color = params.particleColor
-    }
   }
 
   this.randomPosition = () => {
@@ -312,15 +281,15 @@ const _Particle = function(x, y) {
           )
         break
       }
-
+      const radius = this.getRadius()
       this.x =
-        this.getRadius() +
+        radius +
         params.margin +
-        Math.random() * (W - 2 * (params.margin + this.getRadius()))
+        Math.random() * (W - 2 * (params.margin + radius))
       this.y =
-        this.getRadius() +
+        radius +
         params.margin +
-        Math.random() * (H - 2 * (params.margin + this.getRadius()))
+        Math.random() * (H - 2 * (params.margin + radius))
 
       var collides = false
 
@@ -361,30 +330,11 @@ const _Particle = function(x, y) {
   }
 
   this.paint = ctx => {
-    var drawMethod = params.fill === true ? 'fill' : 'stroke'
-
     ctx.beginPath()
-    ctx.arc(this.x, this.y, this.getRadius(), 0 * Math.PI, 2 * Math.PI, false)
-
-    var oldStyle = ctx[drawMethod + 'Style']
-
-    ctx[drawMethod + 'Style'] = this.color
-    ctx[drawMethod]()
+    ctx.arc(this.x, this.y, this.getRadius(), 0, 2 * Math.PI, false)
+    ctx.fillStyle = params.particleColor
+    ctx.fill()
     ctx.lineWidth = 5
-
-    if (typeof params.text === 'string' && params.text.length > 0) {
-      ctx.lineWidth = 1
-      ctx.font = this.getRadius() / 2 + 'px Arial'
-      ctx.textAlign = 'center'
-
-      var fs = ctx.fillStyle
-
-      ctx.fillStyle = 'white'
-      ctx.fillText(params.text, this.x, this.y + this.getRadius() / 5)
-      ctx.fillStyle = fs
-    }
-
-    ctx[drawMethod + 'Style'] = oldStyle
   }
 }
 

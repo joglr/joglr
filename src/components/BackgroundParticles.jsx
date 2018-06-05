@@ -3,8 +3,9 @@ import { withStyles } from 'material-ui/styles'
 import init from './../helpers/background-particles'
 
 const options = {
-  gravity: 0,
-  count: 20,
+  gravity: [ 0, 0 ],
+  count: 7,
+  margin: 5,
   particleColor: 'hsl(0, 0%, 50%)'
 }
 let canvas
@@ -13,7 +14,7 @@ const styles = {
     position: 'fixed',
     top: 0,
     zIndex: '-1',
-    filter: 'blur(10px)'
+    filter: 'blur(7px)'
   }
 }
 
