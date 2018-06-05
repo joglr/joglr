@@ -86,7 +86,9 @@ const Technologies = ({ classes, ReactGA }) => (
             target="_blank"
             rel="noopener noreferrer">
             <div className={classes.logoImg}>
-              <Logo style={{ height: '100%' }} />
+              <Logo style={{ height: '100%' }}>
+                <title>Visit {title}</title>
+              </Logo>
             </div>
           </ReactGA.OutboundLink>
         </Tooltip>
