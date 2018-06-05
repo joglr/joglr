@@ -1,6 +1,5 @@
 import React from 'react'
 import Typography from 'material-ui/Typography'
-import Tooltip from 'material-ui/Tooltip'
 import Technologies from './Technologies.jsx'
 import joinClasses from './../helpers/join-classes'
 import ReactGA from 'react-ga'
@@ -29,27 +28,23 @@ const About = ({ classes }) => (
         these state-of-the-art technologies:
         <Technologies ReactGA={ReactGA} />
         <span>
-          If you have any questions, feel free to get in touch with me{' '}
+          If you have any questions, feel free to get in touch with me via{' '}
         </span>
-        <Tooltip title="E-mail">
-          <ReactGA.OutboundLink
-            eventLabel="contact.email"
-            to="mailto:jonas.g.roessum@gmail.com"
-            className={joinClasses(classes.themeSecondaryText, classes.link)}>
-            here
-          </ReactGA.OutboundLink>
-        </Tooltip>
+        <ReactGA.OutboundLink
+          eventLabel="contact.email"
+          to="mailto:jonas.g.roessum@gmail.com"
+          className={joinClasses(classes.themeSecondaryText, classes.link)}>
+          e-mail
+        </ReactGA.OutboundLink>
         <span> or </span>
-        <Tooltip title="Twitter">
-          <ReactGA.OutboundLink
-            eventLabel="contact.twitter"
-            to="https://twitter.com/intent/tweet?screen_name=jonasroessum"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={joinClasses(classes.themeSecondaryText, classes.link)}>
-            here
-          </ReactGA.OutboundLink>
-        </Tooltip>
+        <ReactGA.OutboundLink
+          eventLabel="contact.twitter"
+          to="https://twitter.com/intent/tweet?screen_name=jonasroessum"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={joinClasses(classes.themeSecondaryText, classes.link)}>
+          twitter
+        </ReactGA.OutboundLink>
         <span>!</span>
       </Typography>
     </div>
