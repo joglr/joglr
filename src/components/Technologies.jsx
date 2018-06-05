@@ -71,8 +71,17 @@ const styles = theme => ({
     height: 10 * theme.spacing.unit,
     margin: 1.5 * theme.spacing.unit,
     filter: `drop-shadow(0 ${theme.spacing.unit / 2}px ${theme.spacing.unit /
-      2}px hsla(0, 0%, 0%, 0.3))`,
-    fontSize: 0
+      2}px hsla(0, 0%, 0%, 0.3))`
+  },
+  visuallyhidden: {
+    border: '0',
+    clip: 'rect(0 0 0 0)',
+    height: '1px',
+    width: '1px',
+    margin: '-1px',
+    padding: '0',
+    overflow: 'hidden',
+    position: 'absolute'
   }
 })
 
@@ -87,7 +96,7 @@ const Technologies = ({ classes, ReactGA }) => (
             to={link}
             target="_blank"
             rel="noopener noreferrer">
-            Visit {title}
+            <span className={classes.visuallyhidden}>Visit {title}</span>
             <Logo style={{ height: '100%' }}>
               <title>Visit {title}</title>
             </Logo>
