@@ -105,7 +105,7 @@ const _bindHandlers = (document, canvas, ctx) => {
 
   handlers.forEach(handler => {
     ;((t, e, h) => {
-      t.addEventListener(e, h)
+      t.addEventListener(e, h, { passive: true })
     }).apply(this, handler)
   })
 }
