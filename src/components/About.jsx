@@ -3,8 +3,12 @@ import Typography from 'material-ui/Typography'
 import Tooltip from 'material-ui/Tooltip'
 import Technologies from './Technologies.jsx'
 import joinClasses from './../helpers/join-classes'
+import ReactGA from 'react-ga'
 
-const About = ({ classes, ReactGA }) => (
+ReactGA.initialize('UA-34976555-1')
+ReactGA.pageview(window.location.pathname + window.location.search)
+
+const About = ({ classes }) => (
   <section
     className={joinClasses(
       classes.section,

@@ -11,6 +11,7 @@ import asyncComponent from './../helpers/asyncComponent'
 const AsyncBackgroundParticles = asyncComponent(() => import('./BackgroundParticles.jsx'))
 const AsyncAbout = asyncComponent(() => import('./About.jsx'))
 const AsyncStyles = asyncComponent(() => import('./Styles.jsx'))
+
 const absolute = {
   position: 'absolute'
 }
