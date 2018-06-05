@@ -5,7 +5,6 @@ import App from './components/App.jsx'
 import registerServiceWorker from './registerServiceWorker'
 import theme from './theme'
 import ReactGA from 'react-ga'
-import './index.css'
 
 ReactGA.initialize('UA-34976555-1')
 ReactGA.pageview(window.location.pathname + window.location.search)

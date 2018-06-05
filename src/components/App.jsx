@@ -6,12 +6,11 @@ import Typography from 'material-ui/Typography'
 import LocationIcon from '@material-ui/icons/LocationOn'
 import DownIcon from '@material-ui/icons/KeyboardArrowDown'
 import setColorOpacity from '../helpers/set-color-opacity'
-import 'typeface-roboto'
 import asyncComponent from './../helpers/asyncComponent'
 
 const AsyncBackgroundParticles = asyncComponent(() => import('./BackgroundParticles.jsx'))
 const AsyncAbout = asyncComponent(() => import('./About.jsx'))
-
+const AsyncStyles = asyncComponent(() => import('./Styles.jsx'))
 const absolute = {
   position: 'absolute'
 }
@@ -173,7 +172,7 @@ const App = ({ classes, ReactGA }) => {
               classes.display3
             )}>
             <p>
-              I'm a self-taught developer and creator based in{' '}
+              I'm a self-taught web developer and creator based in{' '}
               <strong className={classes.w400}>
                 <span className={classes.noWrap}>
                   <LocationIcon
@@ -193,6 +192,7 @@ const App = ({ classes, ReactGA }) => {
       </section>
       <AsyncAbout classes={classes} ReactGA={ReactGA} />
       <AsyncBackgroundParticles />
+      <AsyncStyles />
     </div>
   )
 }
