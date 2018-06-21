@@ -71,7 +71,12 @@ const styles = theme => ({
     height: 10 * theme.spacing.unit,
     margin: 1.5 * theme.spacing.unit,
     filter: `drop-shadow(0 ${theme.spacing.unit / 2}px ${theme.spacing.unit /
-      2}px hsla(0, 0%, 0%, 0.3))`
+      2}px hsla(0, 0%, 0%, 0.3))`,
+  },
+  '@media (max-width: 960px)': {
+    logoLink: {
+      height: 8 * theme.spacing.unit,
+    }
   },
   visuallyhidden: {
     border: '0',
