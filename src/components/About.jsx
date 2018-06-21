@@ -1,5 +1,5 @@
 import React from 'react'
-import Typography from 'material-ui/Typography'
+import Typography from '@material-ui/core/Typography'
 import Technologies from './Technologies.jsx'
 import joinClasses from './../helpers/join-classes'
 import ReactGA from 'react-ga'

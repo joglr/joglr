@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import joinClasses from './../helpers/join-classes'
-import Typography from 'material-ui/Typography'
+import Typography from '@material-ui/core/Typography'
 import LocationIcon from '@material-ui/icons/LocationOn'
 import DownIcon from '@material-ui/icons/KeyboardArrowDown'
-import setColorOpacity from '../helpers/set-color-opacity'
+import setColorOpacity from './../helpers/set-color-opacity'
 import asyncComponent from './../helpers/asyncComponent'
 
 const AsyncBackgroundParticles = asyncComponent(() => import('./BackgroundParticles.jsx'))

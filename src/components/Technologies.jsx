@@ -1,6 +1,6 @@
 import React from 'react'
-import { withStyles } from 'material-ui/styles'
-import Tooltip from 'material-ui/Tooltip'
+import { withStyles } from '@material-ui/core/styles'
+import Tooltip from '@material-ui/core/Tooltip'
 import ECMAScript from './../media/ecmascript-logo.jsx'
 import nodejs from './../media/nodejs-logo.jsx'
 import npm from './../media/npm-logo.jsx'
