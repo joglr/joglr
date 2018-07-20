@@ -6,7 +6,6 @@
     "@material-ui/core": "^1.2.3",
     "@material-ui/icons": "^1.1.0",
     "lodash.debounce": "^4.0.8",
-    "material-ui": "^1.0.0-beta.47",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
