@@ -2,13 +2,11 @@ import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Tooltip from '@material-ui/core/Tooltip'
 import ECMAScript from './../media/ecmascript-logo.jsx'
-import npm from './../media/npm-logo.jsx'
 import webpack from './../media/webpack-logo.jsx'
 import react from './../media/react-logo.jsx'
 import redux from './../media/redux-logo.jsx'
 import leaflet from './../media/leaflet-logo.jsx'
 import materialUI from './../media/material-ui-logo.jsx'
-import materialDesign from './../media/material-design-logo.jsx'
 
 const technologies = [
   {
