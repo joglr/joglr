@@ -99,11 +99,6 @@ const styles = theme => ({
     fontSize: 'smaller',
     color: theme.palette.secondary.main
   },
-  // downIcon: {
-  //   extend: 'textIcon',
-  //   fontSize: '5rem',
-  //   animation: 'hover 1s ease-in-out alternate infinite'
-  // },
   leftIcon: {
     // marginRight: '0.1em'
   },
