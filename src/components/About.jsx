@@ -9,6 +9,7 @@ ReactGA.pageview(window.location.pathname + window.location.search)
 
 const About = ({ classes }) => (
   <section
+    id="about"
     className={joinClasses(
       classes.section,
       classes.centeredY,
@@ -24,25 +25,25 @@ const About = ({ classes }) => (
           classes.w300,
           classes.display3
         )}>
-        I make <strong className={classes.w400}>web applications</strong>, using
-        these state-of-the-art technologies:
+        I make <strong className={classes.w400}>web applications</strong>,
+        using these amazing open-source libraries:
         <Technologies ReactGA={ReactGA} />
         <span>
-          If you have any questions, feel free to get in touch with me via{' '}
+          Feel free to get in touch via{' '}
         </span>
         <ReactGA.OutboundLink
           eventLabel="contact.email"
           to="mailto:jonas.g.roessum@gmail.com"
-          className={joinClasses(classes.themeSecondaryText, classes.link)}>
-          e-mail
+          className={joinClasses(classes.themeSecondaryText, classes.textLink)}>
+          email
         </ReactGA.OutboundLink>
         <span> or </span>
         <ReactGA.OutboundLink
           eventLabel="contact.twitter"
-          to="https://twitter.com/intent/tweet?screen_name=jonasroessum"
+          to="https://twitter.com/jonasroessum"
           target="_blank"
           rel="noopener noreferrer"
-          className={joinClasses(classes.themeSecondaryText, classes.link)}>
+          className={joinClasses(classes.themeSecondaryText, classes.textLink)}>
           twitter
         </ReactGA.OutboundLink>
         <span>!</span>

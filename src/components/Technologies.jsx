@@ -2,7 +2,6 @@ import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Tooltip from '@material-ui/core/Tooltip'
 import ECMAScript from './../media/ecmascript-logo.jsx'
-import nodejs from './../media/nodejs-logo.jsx'
 import npm from './../media/npm-logo.jsx'
 import webpack from './../media/webpack-logo.jsx'
 import react from './../media/react-logo.jsx'
@@ -13,25 +12,15 @@ import materialDesign from './../media/material-design-logo.jsx'
 
 const technologies = [
   {
-    title: 'Material Design',
-    link: 'https://material.io',
-    logo: materialDesign
-  },
-  {
     title: 'ECMAScript',
     link: 'https://en.wikipedia.org/wiki/ECMAScript',
     logo: ECMAScript
   },
-  {
-    title: 'NodeJS',
-    link: 'https://nodejs.org',
-    logo: nodejs
-  },
-  {
-    title: 'Node Package Manager',
-    link: 'https://www.npmjs.com',
-    logo: npm
-  },
+  // {
+  //   title: 'Node Package Manager',
+  //   link: 'https://www.npmjs.com',
+  //   logo: npm
+  // },
   {
     title: 'Webpack',
     link: 'https://webpack.js.org',
@@ -47,6 +36,11 @@ const technologies = [
     link: 'https://redux.js.org',
     logo: redux
   },
+  // {
+  //   title: 'Material Design',
+  //   link: 'https://material.io',
+  //   logo: materialDesign
+  // },
   {
     title: 'Material UI',
     link: 'https://www.material-ui.com',

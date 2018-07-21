@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles'
 import joinClasses from './../helpers/join-classes'
 import Typography from '@material-ui/core/Typography'
 import LocationIcon from '@material-ui/icons/LocationOn'
+import Button from '@material-ui/core/Button'
+import Tooltip from '@material-ui/core/Tooltip'
 import DownIcon from '@material-ui/icons/KeyboardArrowDown'
 import setColorOpacity from './../helpers/set-color-opacity'
 import asyncComponent from './../helpers/asyncComponent'
@@ -68,10 +70,7 @@ const styles = theme => ({
   w500: {
     fontWeight: 500
   },
-  em: {
-    fontStyle: 'italic'
-  },
-  link: {
+  textLink: {
     display: 'inline-block',
     verticalAlign: 'bottom',
     textDecoration: 'none',
@@ -87,8 +86,7 @@ const styles = theme => ({
       bottom: '0',
       left: '0',
       borderBottom: `2px currentColor solid`,
-      transition: 'width .25s'
-      // color: 'blue',
+      transition: 'width .15s cubic-bezier(.5,0,0,1)'
     },
     '&:hover:after': {
       width: '100%'
@@ -101,11 +99,11 @@ const styles = theme => ({
     fontSize: 'smaller',
     color: theme.palette.secondary.main
   },
-  downIcon: {
-    extend: 'textIcon',
-    fontSize: '5rem',
-    animation: 'hover 1s ease-in-out alternate infinite'
-  },
+  // downIcon: {
+  //   extend: 'textIcon',
+  //   fontSize: '5rem',
+  //   animation: 'hover 1s ease-in-out alternate infinite'
+  // },
   leftIcon: {
     // marginRight: '0.1em'
   },
@@ -185,9 +183,11 @@ const App = ({ classes, ReactGA }) => {
             </p>
           </Typography>
           <div className={classes.textCentered}>
-            <div>
-              <DownIcon className={classes.downIcon} />
-            </div>
+            <Tooltip title="Read more" placement="bottom">
+              <Button color="secondary" variant="fab" component="a" href="#about">
+                <DownIcon />
+              </Button>
+            </Tooltip>
           </div>
         </div>
       </section>

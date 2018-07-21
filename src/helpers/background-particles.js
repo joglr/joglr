@@ -73,7 +73,6 @@ const _clearCanvas = ctx => ctx.clearRect(0, 0, W, H)
 
 const _resizeHandler = (document, canvas, ctx) => () => {
   _clearCanvas(ctx)
-  console.log('resized')
   canvas.removeAttribute('width')
   canvas.removeAttribute('height')
   canvas.style.width = '100%'
