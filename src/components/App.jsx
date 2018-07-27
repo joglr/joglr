@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import joinClasses from './../helpers/join-classes'
 import Typography from '@material-ui/core/Typography'
-import LocationIcon from '@material-ui/icons/LocationOn'
+import LocationIcon from '@material-ui/icons/LocationOnSharp'
 import Button from '@material-ui/core/Button'
 import Tooltip from '@material-ui/core/Tooltip'
-import DownIcon from '@material-ui/icons/KeyboardArrowDown'
+import DownIcon from '@material-ui/icons/KeyboardArrowDownSharp'
 import setColorOpacity from './../helpers/set-color-opacity'
 import asyncComponent from './../helpers/asyncComponent'
 
@@ -35,7 +35,7 @@ const styles = theme => ({
       boxShadow: `0 0 ${theme.spacing.unit}px 0 black`,
       borderTop: `${topBorderSize * theme.spacing.unit}px ${theme.palette
         .secondary.main} solid`,
-      backgroundColor: setColorOpacity(theme.palette.primary.main, 0.85)
+      // setColorOpacity(theme.palette.primary.main, 0.85)
     }
   },
   container: {
@@ -49,32 +49,25 @@ const styles = theme => ({
     userSelect: 'none'
   },
   display4: {
+    color: 'inherit',
     '@media (max-width: 960px)': {
       fontSize: 9 * theme.spacing.unit
     }
   },
   display3: {
+    color: 'inherit',
     '@media (max-width: 960px)': {
       fontSize: 4 * theme.spacing.unit
     }
   },
-  w100: {
-    fontWeight: 100
-  },
-  w300: {
-    fontWeight: 300
-  },
-  w400: {
-    fontWeight: 400
-  },
-  w500: {
-    fontWeight: 500
-  },
+  w100: { fontWeight: 100 },
+  w300: { fontWeight: 300 },
+  w400: { fontWeight: 400 },
+  w500: { fontWeight: 500 },
   textLink: {
     display: 'inline-block',
     verticalAlign: 'bottom',
     textDecoration: 'none',
-    color: theme.palette.secondary.main,
     // overflow: 'hidden',
     position: 'relative',
     '&:after': {
@@ -85,7 +78,7 @@ const styles = theme => ({
       position: 'absolute',
       bottom: '0',
       left: '0',
-      borderBottom: `2px currentColor solid`,
+      borderBottom: `0.04em currentColor solid`,
       transition: 'width .15s cubic-bezier(.5,0,0,1)'
     },
     '&:hover:after': {
@@ -96,8 +89,9 @@ const styles = theme => ({
     textAlign: 'center'
   },
   textIcon: {
-    fontSize: 'smaller',
-    color: theme.palette.secondary.main
+    color: theme.palette.secondary.main,
+    fontSize: '90%',
+    verticalAlign: 'baseline'
   },
   leftIcon: {
     // marginRight: '0.1em'
@@ -128,9 +122,7 @@ const styles = theme => ({
   themePrimaryText: { color: theme.palette.primary.main },
   themePrimaryContrastText: { color: theme.palette.primary.contrastText },
   themeSecondary: { backgroundColor: theme.palette.secondary.main },
-  themeSecondaryContrast: {
-    backgroundColor: theme.palette.secondary.contrastText
-  },
+  themeSecondaryContrast: { backgroundColor: theme.palette.secondary.contrastText },
   themeSecondaryText: { color: theme.palette.secondary.main },
   themeSecondaryContrastText: { color: theme.palette.secondary.contrastText }
 })
@@ -166,7 +158,7 @@ const App = ({ classes, ReactGA }) => {
               classes.display3
             )}>
             <p>
-              I'm a self-taught web developer and creator based in{' '}
+              I'm a self-taught developer and creator based in{' '}
               <strong className={classes.w400}>
                 <span className={classes.noWrap}>
                   <LocationIcon

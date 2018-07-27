@@ -1,29 +1,12 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Tooltip from '@material-ui/core/Tooltip'
-// import ECMAScript from './../media/ecmascript-logo.jsx'
-// import webpack from './../media/webpack-logo.jsx'
 import react from './../media/react-logo.jsx'
 import redux from './../media/redux-logo.jsx'
-import leaflet from './../media/leaflet-logo.jsx'
 import materialUI from './../media/material-ui-logo.jsx'
+import leaflet from './../media/leaflet-logo.jsx'
 
 const technologies = [
-  // {
-  //   title: 'ECMAScript',
-  //   link: 'https://en.wikipedia.org/wiki/ECMAScript',
-  //   logo: ECMAScript
-  // },
-  // {
-  //   title: 'Node Package Manager',
-  //   link: 'https://www.npmjs.com',
-  //   logo: npm
-  // },
-  // {
-  //   title: 'Webpack',
-  //   link: 'https://webpack.js.org',
-  //   logo: webpack
-  // },
   {
     title: 'React',
     link: 'https://reactjs.org',
@@ -34,11 +17,6 @@ const technologies = [
     link: 'https://redux.js.org',
     logo: redux
   },
-  // {
-  //   title: 'Material Design',
-  //   link: 'https://material.io',
-  //   logo: materialDesign
-  // },
   {
     title: 'Material UI',
     link: 'https://www.material-ui.com',
@@ -86,7 +64,7 @@ const Technologies = ({ classes, ReactGA }) => (
   <div>
     <div className={classes.root}>
       {technologies.map(({ title, link, logo: Logo }, key) => (
-        <Tooltip key={key} title={title} placement="top">
+        <Tooltip key={key} title={title} placement="bottom">
           <ReactGA.OutboundLink
             className={classes.logoLink}
             eventLabel={'technology.' + title}

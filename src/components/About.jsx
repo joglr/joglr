@@ -13,14 +13,13 @@ const About = ({ classes }) => (
     className={joinClasses(
       classes.section,
       classes.centeredY,
-      // classes.themePrimary,
+      classes.themePrimary,
       classes.themePrimaryContrastText
     )}>
     <div className={joinClasses(classes.typographyWrapper, classes.container)}>
       <Typography
         variant="display3"
         className={joinClasses(
-          classes.themePrimaryContrastText,
           classes.noUserSelect,
           classes.w300,
           classes.display3
@@ -34,7 +33,7 @@ const About = ({ classes }) => (
         <ReactGA.OutboundLink
           eventLabel="contact.email"
           to="mailto:jonas.g.roessum@gmail.com"
-          className={joinClasses(classes.themeSecondaryText, classes.textLink)}>
+          className={joinClasses(classes.textLink, classes.themeSecondaryText)}>
           email
         </ReactGA.OutboundLink>
         <span> or </span>
@@ -43,7 +42,7 @@ const About = ({ classes }) => (
           to="https://twitter.com/jonasroessum"
           target="_blank"
           rel="noopener noreferrer"
-          className={joinClasses(classes.themeSecondaryText, classes.textLink)}>
+          className={joinClasses(classes.textLink, classes.themeSecondaryText)}>
           twitter
         </ReactGA.OutboundLink>
         <span>!</span>
