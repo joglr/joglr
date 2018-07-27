@@ -1,29 +1,29 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Tooltip from '@material-ui/core/Tooltip'
-import ECMAScript from './../media/ecmascript-logo.jsx'
-import webpack from './../media/webpack-logo.jsx'
+// import ECMAScript from './../media/ecmascript-logo.jsx'
+// import webpack from './../media/webpack-logo.jsx'
 import react from './../media/react-logo.jsx'
 import redux from './../media/redux-logo.jsx'
 import leaflet from './../media/leaflet-logo.jsx'
 import materialUI from './../media/material-ui-logo.jsx'
 
 const technologies = [
-  {
-    title: 'ECMAScript',
-    link: 'https://en.wikipedia.org/wiki/ECMAScript',
-    logo: ECMAScript
-  },
+  // {
+  //   title: 'ECMAScript',
+  //   link: 'https://en.wikipedia.org/wiki/ECMAScript',
+  //   logo: ECMAScript
+  // },
   // {
   //   title: 'Node Package Manager',
   //   link: 'https://www.npmjs.com',
   //   logo: npm
   // },
-  {
-    title: 'Webpack',
-    link: 'https://webpack.js.org',
-    logo: webpack
-  },
+  // {
+  //   title: 'Webpack',
+  //   link: 'https://webpack.js.org',
+  //   logo: webpack
+  // },
   {
     title: 'React',
     link: 'https://reactjs.org',
