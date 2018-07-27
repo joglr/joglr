@@ -35,7 +35,7 @@ const styles = theme => ({
       boxShadow: `0 0 ${theme.spacing.unit}px 0 black`,
       borderTop: `${topBorderSize * theme.spacing.unit}px ${theme.palette
         .secondary.main} solid`,
-      // setColorOpacity(theme.palette.primary.main, 0.85)
+      backgroundColor: setColorOpacity(theme.palette.primary.main, 0.85)
     }
   },
   container: {

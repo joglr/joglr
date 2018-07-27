@@ -13,7 +13,6 @@ const About = ({ classes }) => (
     className={joinClasses(
       classes.section,
       classes.centeredY,
-      classes.themePrimary,
       classes.themePrimaryContrastText
     )}>
     <div className={joinClasses(classes.typographyWrapper, classes.container)}>
