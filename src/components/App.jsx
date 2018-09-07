@@ -9,6 +9,7 @@ import Tooltip from '@material-ui/core/Tooltip'
 import DownIcon from '@material-ui/icons/KeyboardArrowDownSharp'
 import setColorOpacity from './../helpers/set-color-opacity'
 import asyncComponent from './../helpers/asyncComponent'
+import pkg from './../../package.json'
 
 const AsyncBackgroundParticles = asyncComponent(() => import('./BackgroundParticles.jsx'))
 const AsyncAbout = asyncComponent(() => import('./About.jsx'))
@@ -37,6 +38,10 @@ const styles = theme => ({
         .secondary.main} solid`,
       backgroundColor: setColorOpacity(theme.palette.primary.main, 0.85)
     }
+  },
+  paragraph: {
+    margin: '0.5em 0 0.5em',
+    lineHeight: '150%'
   },
   container: {
     maxWidth: '960px',
@@ -147,7 +152,7 @@ const App = ({ classes, ReactGA }) => {
               classes.w100,
               classes.display4
             )}>
-            Hi, I'm Jonas
+            Hi.
           </Typography>
           <Typography
             variant="display3"
@@ -158,7 +163,13 @@ const App = ({ classes, ReactGA }) => {
               classes.display3
             )}>
             <p>
-              I'm a self-taught developer and creator based in{' '}
+              I'm {' '}
+            <span className={classes.w400}>
+              <Tooltip title="Jonas Glerup Røssum" placement="top">
+                <span>Jona<span onClick={() => console.log(pkg.version)}>s</span></span>
+              </Tooltip>
+            </span>
+            , a self-taught front end developer based in{' '}
               <strong className={classes.w400}>
                 <span className={classes.noWrap}>
                   <LocationIcon
