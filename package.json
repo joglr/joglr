@@ -2,6 +2,10 @@
   "name": "jonasroessum",
   "version": "1.3.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/joglr/jonasroessum.git"
+  },
   "dependencies": {
     "@material-ui/core": "^1.4.0",
     "@material-ui/icons": "^2.0.0",
