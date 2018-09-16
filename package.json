@@ -12,15 +12,15 @@
     "url": "https://bitbucket.org/joglr/jonasroessum.git"
   },
   "dependencies": {
-    "@material-ui/core": "^1.4.0",
-    "@material-ui/icons": "^2.0.0",
+    "@material-ui/core": "3.0.3",
+    "@material-ui/icons": "3.0.1",
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-ga": "^2.5.3",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.4",
+    "react-scripts": "1.1.5",
     "redux": "^4.0.0",
     "typeface-roboto": "0.0.54"
   },
@@ -35,5 +35,13 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint-plugin-jest": "^21.17.0"
+  },
+  "guppy": {
+    "id": "jonasroessum",
+    "name": "jonasroessum",
+    "type": "create-react-app",
+    "color": "#C51162",
+    "icon": null,
+    "createdAt": 1537122228298
   }
 }
