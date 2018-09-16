@@ -1,0 +1,13 @@
+{
+  "name": "jonasroessum",
+  "alias": "jonasroessum.com",
+  "type": "static",
+  "static": {
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

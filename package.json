@@ -20,28 +20,23 @@
     "react-dom": "^16.4.1",
     "react-ga": "^2.5.3",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.5",
     "redux": "^4.0.0",
     "typeface-roboto": "0.0.54"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "deploy": "set CI=true && npm run test && now --public && now alias jonasroessum.com",
+    "build": "react-scripts build && npm run icon && npm run icon-inject",
+    "deploy": "set CI=true && now --public && now alias",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "icon": "real-favicon generate graphics/faviconDescription.json graphics/faviconData.json build",
+    "icon-inject": "real-favicon inject graphics/faviconData.json build build/index.html"
   },
   "devDependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "eslint-plugin-jest": "^21.17.0"
-  },
-  "guppy": {
-    "id": "jonasroessum",
-    "name": "jonasroessum",
-    "type": "create-react-app",
-    "color": "#C51162",
-    "icon": null,
-    "createdAt": 1537122228298
+    "cli-real-favicon": "0.0.6",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "react-scripts": "1.1.5"
   }
 }
