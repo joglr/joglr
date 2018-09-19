@@ -33,6 +33,7 @@
 			"pictureAspect": "shadow",
 			"themeColor": "#ffffff",
 			"manifest": {
+				"startUrl": "/",
 				"name": "Jonas Røssum",
 				"display": "standalone",
 				"orientation": "notSet",
