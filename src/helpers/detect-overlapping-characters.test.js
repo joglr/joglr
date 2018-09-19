@@ -1,5 +1,4 @@
 import detectOverlappingCharacters from './detect-overlapping-characters'
-import jest2 from 'jest'
 
 describe('detectOverlappingCharacters', () => {
   it('is a function', () => {
