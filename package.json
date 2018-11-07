@@ -12,16 +12,15 @@
     "url": "https://bitbucket.org/joglr/jonasroessum.git"
   },
   "dependencies": {
-    "@material-ui/core": "3.0.3",
+    "@material-ui/core": "3.4.0",
     "@material-ui/icons": "3.0.1",
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
     "react-ga": "^2.5.3",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
-    "typeface-roboto": "0.0.54"
+    "typeface-roboto": "0.0.54",
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,7 +35,12 @@
     "cli-real-favicon": "0.0.6",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
-    "eslint-plugin-jest": "^21.17.0",
-    "react-scripts": "1.1.5"
-  }
+    "eslint-plugin-jest": "^22.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Tooltip from '@material-ui/core/Tooltip'
 import react from './../media/react-logo.jsx'
-import redux from './../media/redux-logo.jsx'
 import materialUI from './../media/material-ui-logo.jsx'
 import leaflet from './../media/leaflet-logo.jsx'
 
@@ -11,11 +10,6 @@ const technologies = [
     title: 'React',
     link: 'https://reactjs.org',
     logo: react
-  },
-  {
-    title: 'Redux',
-    link: 'https://redux.js.org',
-    logo: redux
   },
   {
     title: 'Material UI',
