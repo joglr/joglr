@@ -15,7 +15,8 @@ import setColorOpacity from './../helpers/set-color-opacity'
 
 const AsyncBackgroundParticles = lazy(() => import('./BackgroundParticles'))
 const AsyncAbout = lazy(() => import('./About'))
-const AsyncStyles = lazy(() => import('./Styles'))
+
+import('typeface-roboto')
 
 const absolute = {
   position: 'absolute'
@@ -204,7 +205,6 @@ const App = ({ classes, ReactGA }) => {
       <Suspense fallback={<LinearProgress />}>
         <AsyncAbout classes={classes} ReactGA={ReactGA} />
         <AsyncBackgroundParticles />
-        <AsyncStyles />
       </Suspense>
     </div>
   )
