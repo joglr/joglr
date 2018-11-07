@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import joinClasses from './../helpers/join-classes'
@@ -8,12 +8,12 @@ import Button from '@material-ui/core/Button'
 import Tooltip from '@material-ui/core/Tooltip'
 import DownIcon from '@material-ui/icons/KeyboardArrowDownSharp'
 import setColorOpacity from './../helpers/set-color-opacity'
-import asyncComponent from './../helpers/asyncComponent'
 import pkg from './../../package.json'
+import { LinearProgress } from '@material-ui/core'
 
-const AsyncBackgroundParticles = asyncComponent(() => import('./BackgroundParticles.jsx'))
-const AsyncAbout = asyncComponent(() => import('./About.jsx'))
-const AsyncStyles = asyncComponent(() => import('./Styles.jsx'))
+const AsyncBackgroundParticles = lazy(() => import('./BackgroundParticles'))
+const AsyncAbout = lazy(() => import('./About'))
+const AsyncStyles = lazy(() => import('./Styles'))
 
 const absolute = {
   position: 'absolute'
@@ -189,9 +189,11 @@ const App = ({ classes, ReactGA }) => {
           </div>
         </div>
       </section>
-      <AsyncAbout classes={classes} ReactGA={ReactGA} />
-      <AsyncBackgroundParticles />
-      <AsyncStyles />
+      <Suspense fallback={<LinearProgress />}>
+        <AsyncAbout classes={classes} ReactGA={ReactGA} />
+        <AsyncBackgroundParticles />
+        <AsyncStyles />
+      </Suspense>
     </div>
   )
 }
