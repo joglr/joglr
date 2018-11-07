@@ -1,5 +1,5 @@
 import debounce from 'lodash.debounce'
-import getElPosition from './get-el-position'
+import getElPosition from './../get-el-position'
 
 const DEBUG = window.location.pathname === 'localhost'
 
