@@ -27,7 +27,7 @@ let params = {
 
   // Gravity factor (0 for microgravity)
 
-  gravity: [ 0, 0 ],
+  gravity: [0, 0],
 
   // Margin to generate particles within (does not affect real boundaries)
 
@@ -58,8 +58,8 @@ const _init = (canvas, window, document, options) => {
 
   const ctx = canvas.getContext('2d')
 
-  _bindHandlers(document, canvas, ctx)
-  _resizeHandler(document, canvas, ctx)()
+  _bindHandlers(document, window, canvas, ctx)
+  _resizeHandler(canvas, ctx)()
   _generateParticles(canvas)
   requestAnimationFrame(_update(canvas, ctx))
 }
@@ -67,11 +67,9 @@ const _init = (canvas, window, document, options) => {
 const _randomBetween = (min, max, ceil) =>
   Math[ceil ? 'ceil' : 'round'](Math.random() * (max - min) + min)
 
-// const _choose = what => what[Math.floor(Math.random() * what.length)]
-
 const _clearCanvas = ctx => ctx.clearRect(0, 0, W, H)
 
-const _resizeHandler = (document, canvas, ctx) => () => {
+const _resizeHandler = (canvas, ctx) => () => {
   _clearCanvas(ctx)
   canvas.removeAttribute('width')
   canvas.removeAttribute('height')
@@ -95,11 +93,11 @@ const _canvasDownHandler = canvas => e =>
       )
     : false
 
-const _bindHandlers = (document, canvas, ctx) => {
+const _bindHandlers = (document, window, canvas, ctx) => {
   var handlers = [
-    [ canvas.parentElement, 'mousedown', _canvasDownHandler(canvas, ctx) ],
-    [ canvas.parentElement, 'touchstart', _canvasDownHandler(canvas, ctx) ],
-    [ window, 'resize', debounce(_resizeHandler(document, canvas, ctx), 200) ]
+    [canvas.parentElement, 'mousedown', _canvasDownHandler(canvas, ctx)],
+    [canvas.parentElement, 'touchstart', _canvasDownHandler(canvas, ctx)],
+    [window, 'resize', debounce(_resizeHandler(canvas, ctx), 200)]
   ]
 
   handlers.forEach(handler => {
@@ -152,7 +150,7 @@ const _Particle = function(x, y) {
 
   // The radius is determined by the randomly generated mass
 
-  this.getRadius = () => (this.mass * 20 / (4 * Math.PI)) ^ (1 / 3)
+  this.getRadius = () => ((this.mass * 20) / (4 * Math.PI)) ^ (1 / 3)
 
   this.distanceTo = (p, squared, nextFrame) => {
     var x1, x2, y1, y2
@@ -255,7 +253,7 @@ const _Particle = function(x, y) {
           // Now, factor in impulse, derived from
           // Conservation of Energy / Conservation of Momentum
 
-          var impulse = 2 * (proj1 - proj2) / (this.mass + p.mass)
+          var impulse = (2 * (proj1 - proj2)) / (this.mass + p.mass)
 
           this.vx = this.vx - impulse * p.mass * normXUnit
           this.vy = this.vy - impulse * p.mass * normYUnit

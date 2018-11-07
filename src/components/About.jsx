@@ -1,8 +1,8 @@
+import { Typography } from '@material-ui/core'
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
-import Technologies from './Technologies.jsx'
-import joinClasses from './../helpers/join-classes'
 import ReactGA from 'react-ga'
+import joinClasses from './../helpers/join-classes'
+import Technologies from './Technologies'
 
 ReactGA.initialize('UA-34976555-1')
 ReactGA.pageview(window.location.pathname + window.location.search)
@@ -24,8 +24,9 @@ const About = ({ classes }) => (
           classes.display3
         )}>
         <p className={classes.paragraph}>
-          I am passionate about making <strong className={classes.w400}>
-          awesome user experiences</strong> using state-of-the-art open-source libraries, such as:
+          I am passionate about making{' '}
+          <strong className={classes.w400}>awesome user experiences</strong>{' '}
+          using state-of-the-art open-source libraries, such as:
         </p>
         <Technologies ReactGA={ReactGA} />
         <p className={classes.paragraph}>
@@ -33,7 +34,10 @@ const About = ({ classes }) => (
           <ReactGA.OutboundLink
             eventLabel="contact.email"
             to="mailto:jonas.g.roessum@gmail.com"
-            className={joinClasses(classes.textLink, classes.themeSecondaryText)}>
+            className={joinClasses(
+              classes.textLink,
+              classes.themeSecondaryText
+            )}>
             email
           </ReactGA.OutboundLink>
           <span> or </span>
@@ -42,7 +46,10 @@ const About = ({ classes }) => (
             to="https://twitter.com/jonasroessum"
             target="_blank"
             rel="noopener noreferrer"
-            className={joinClasses(classes.textLink, classes.themeSecondaryText)}>
+            className={joinClasses(
+              classes.textLink,
+              classes.themeSecondaryText
+            )}>
             twitter
           </ReactGA.OutboundLink>
           <span>!</span>

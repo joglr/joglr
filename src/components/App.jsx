@@ -1,15 +1,17 @@
-import React, { lazy, Suspense } from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import joinClasses from './../helpers/join-classes'
-import Typography from '@material-ui/core/Typography'
-import LocationIcon from '@material-ui/icons/LocationOnSharp'
-import Button from '@material-ui/core/Button'
-import Tooltip from '@material-ui/core/Tooltip'
+import {
+  Button,
+  LinearProgress,
+  Tooltip,
+  Typography,
+  withStyles
+} from '@material-ui/core'
 import DownIcon from '@material-ui/icons/KeyboardArrowDownSharp'
-import setColorOpacity from './../helpers/set-color-opacity'
+import LocationIcon from '@material-ui/icons/LocationOnSharp'
+import PropTypes from 'prop-types'
+import React, { lazy, Suspense } from 'react'
 import pkg from './../../package.json'
-import { LinearProgress } from '@material-ui/core'
+import joinClasses from './../helpers/join-classes'
+import setColorOpacity from './../helpers/set-color-opacity'
 
 const AsyncBackgroundParticles = lazy(() => import('./BackgroundParticles'))
 const AsyncAbout = lazy(() => import('./About'))
@@ -34,8 +36,9 @@ const styles = theme => ({
     '&:not(:first-child)': {
       boxSizing: 'border-box',
       boxShadow: `0 0 ${theme.spacing.unit}px 0 black`,
-      borderTop: `${topBorderSize * theme.spacing.unit}px ${theme.palette
-        .secondary.main} solid`,
+      borderTop: `${topBorderSize * theme.spacing.unit}px ${
+        theme.palette.secondary.main
+      } solid`,
       backgroundColor: setColorOpacity(theme.palette.primary.main, 0.85)
     }
   },
@@ -127,7 +130,9 @@ const styles = theme => ({
   themePrimaryText: { color: theme.palette.primary.main },
   themePrimaryContrastText: { color: theme.palette.primary.contrastText },
   themeSecondary: { backgroundColor: theme.palette.secondary.main },
-  themeSecondaryContrast: { backgroundColor: theme.palette.secondary.contrastText },
+  themeSecondaryContrast: {
+    backgroundColor: theme.palette.secondary.contrastText
+  },
   themeSecondaryText: { color: theme.palette.secondary.main },
   themeSecondaryContrastText: { color: theme.palette.secondary.contrastText }
 })
@@ -163,18 +168,21 @@ const App = ({ classes, ReactGA }) => {
               classes.display3
             )}>
             <p>
-              I'm {' '}
-            <span className={classes.w400}>
-              <Tooltip title="Jonas Glerup Røssum" placement="top">
-                <span>Jona<span onClick={() => console.log(pkg.version)}>s</span></span>
-              </Tooltip>
-            </span>
-            , a self-taught web application developer based in{' '}
+              I'm{' '}
+              <span className={classes.w400}>
+                <Tooltip title="Jonas Glerup Røssum" placement="top">
+                  <span>
+                    Jona<span onClick={() => console.log(pkg.version)}>s</span>
+                  </span>
+                </Tooltip>
+              </span>
+              , a self-taught web application developer based in{' '}
               <strong className={classes.w400}>
                 <span className={classes.noWrap}>
                   <LocationIcon
                     className={joinClasses(classes.textIcon, classes.leftIcon)}
-                  />Copenhagen
+                  />
+                  Copenhagen
                 </span>
                 <span>, Denmark</span>
               </strong>
@@ -182,7 +190,11 @@ const App = ({ classes, ReactGA }) => {
           </Typography>
           <div className={classes.textCentered}>
             <Tooltip title="Read more" placement="bottom">
-              <Button color="secondary" variant="fab" component="a" href="#about">
+              <Button
+                color="secondary"
+                variant="fab"
+                component="a"
+                href="#about">
                 <DownIcon />
               </Button>
             </Tooltip>

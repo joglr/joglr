@@ -1,9 +1,8 @@
+import { Tooltip, withStyles } from '@material-ui/core'
 import React from 'react'
-import { withStyles } from '@material-ui/core/styles'
-import Tooltip from '@material-ui/core/Tooltip'
-import react from './../media/react-logo.jsx'
-import materialUI from './../media/material-ui-logo.jsx'
-import leaflet from './../media/leaflet-logo.jsx'
+import leaflet from './../media/leaflet-logo'
+import materialUI from './../media/material-ui-logo'
+import react from './../media/react-logo'
 
 const technologies = [
   {
@@ -35,11 +34,11 @@ const styles = theme => ({
     height: 10 * theme.spacing.unit,
     margin: 1.5 * theme.spacing.unit,
     filter: `drop-shadow(0 ${theme.spacing.unit / 2}px ${theme.spacing.unit /
-      2}px hsla(0, 0%, 0%, 0.3))`,
+      2}px hsla(0, 0%, 0%, 0.3))`
   },
   '@media (max-width: 960px)': {
     logoLink: {
-      height: 8 * theme.spacing.unit,
+      height: 8 * theme.spacing.unit
     }
   },
   visuallyhidden: {
