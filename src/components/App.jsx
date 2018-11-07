@@ -169,7 +169,7 @@ const App = ({ classes, ReactGA }) => {
                 <span>Jona<span onClick={() => console.log(pkg.version)}>s</span></span>
               </Tooltip>
             </span>
-            , a self-taught front end developer based in{' '}
+            , a self-taught web application developer based in{' '}
               <strong className={classes.w400}>
                 <span className={classes.noWrap}>
                   <LocationIcon
