@@ -25,6 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && npm run icon && npm run icon-inject",
+    "now-build": "npm run build && mv build dist",
     "deploy": "set CI=true && now --public && now alias",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
