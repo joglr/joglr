@@ -9,7 +9,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/joglr/jonasroessum.git"
+    "url": "https://github.com/joglr/jonasroessum.git"
   },
   "dependencies": {
     "@material-ui/core": "3.4.0",
