@@ -14,34 +14,37 @@
   "dependencies": {
     "@material-ui/core": "3.4.0",
     "@material-ui/icons": "3.0.1",
+    "@material-ui/styles": "^3.0.0-alpha.8",
+    "@wapps/gatsby-plugin-material-ui": "^1.2.0",
+    "cli-real-favicon": "0.0.7",
+    "gatsby": "^2.0.76",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-sharp": "^2.1.8",
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.2",
-    "react": "^16.7.0-alpha.0",
-    "react-dom": "^16.7.0-alpha.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-ga": "^2.5.3",
-    "typeface-roboto": "0.0.54",
-    "react-scripts": "^2.1.1"
+    "react-helmet": "^5.2.0",
+    "typeface-roboto": "0.0.54"
   },
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && npm run icon && npm run icon-inject",
-    "now-build": "npm run build && mv build dist",
-    "deploy": "set CI=true && now --public && now alias",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "icon": "real-favicon generate graphics/faviconDescription.json graphics/faviconData.json build",
-    "icon-inject": "real-favicon inject graphics/faviconData.json build build/index.html"
+    "build": "gatsby build",
+    "now-build": "npm run build && mv public dist",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "icon": "real-favicon generate graphics/faviconDescription.json graphics/faviconData.json public",
+    "icon-inject": "real-favicon inject graphics/faviconData.json public public/index.html"
   },
   "devDependencies": {
-    "cli-real-favicon": "0.0.6",
-    "enzyme": "^3.6.0",
-    "enzyme-adapter-react-16": "^1.5.0",
-    "eslint-plugin-jest": "^22.0.0"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "prettier": "^1.15.2"
+  }
 }

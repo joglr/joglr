@@ -1,46 +1,677 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Jonas Røssum is a self-taught web application developer and user experience creator based in Copenhagen, Denmark. ">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta name="theme-color" content="#2979ff">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Jonas Røssum – Web Developer</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-      <style>
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: sans-serif;
-          overflow-y: scroll;
-        }
-      </style>
-  </body>
-</html>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/7.efbeb78c60f66d75c538.css">@font-face{font-family:Roboto;font-style:normal;font-display:swap;font-weight:100;src:local("Roboto Thin "),local("Roboto-Thin"),url(/static/roboto-latin-100-987b84570ea69ee660455b8d5e91f5f1.woff2) format("woff2"),url(/static/roboto-latin-100-e9dbbe8a693dd275c16d32feb101f1c1.woff) format("woff")}@font-face{font-family:Roboto;font-style:italic;font-display:swap;font-weight:100;src:local("Roboto Thin italic"),local("Roboto-Thinitalic"),url(/static/roboto-latin-100italic-6232f43d15b0e7a0bf0fe82e295bdd06.woff2) format("woff2"),url(/static/roboto-latin-100italic-d704bb3d579b7d5e40880c75705c8a71.woff) format("woff")}@font-face{font-family:Roboto;font-style:normal;font-display:swap;font-weight:300;src:local("Roboto Light "),local("Roboto-Light"),url(/static/roboto-latin-300-55536c8e9e9a532651e3cf374f290ea3.woff2) format("woff2"),url(/static/roboto-latin-300-a1471d1d6431c893582a5f6a250db3f9.woff) format("woff")}@font-face{font-family:Roboto;font-style:italic;font-display:swap;font-weight:300;src:local("Roboto Light italic"),local("Roboto-Lightitalic"),url(/static/roboto-latin-300italic-d69924b98acd849cdeba9fbff3f88ea6.woff2) format("woff2"),url(/static/roboto-latin-300italic-210a7c781f5a354a0e4985656ab456d9.woff) format("woff")}@font-face{font-family:Roboto;font-style:normal;font-display:swap;font-weight:400;src:local("Roboto Regular "),local("Roboto-Regular"),url(/static/roboto-latin-400-5d4aeb4e5f5ef754e307d7ffaef688bd.woff2) format("woff2"),url(/static/roboto-latin-400-bafb105baeb22d965c70fe52ba6b49d9.woff) format("woff")}@font-face{font-family:Roboto;font-style:italic;font-display:swap;font-weight:400;src:local("Roboto Regular italic"),local("Roboto-Regularitalic"),url(/static/roboto-latin-400italic-d8bcbe724fd6f4ba44d0ee6a2675890f.woff2) format("woff2"),url(/static/roboto-latin-400italic-9680d5a0c32d2fd084e07bbc4c8b2923.woff) format("woff")}@font-face{font-family:Roboto;font-style:normal;font-display:swap;font-weight:500;src:local("Roboto Medium "),local("Roboto-Medium"),url(/static/roboto-latin-500-285467176f7fe6bb6a9c6873b3dad2cc.woff2) format("woff2"),url(/static/roboto-latin-500-de8b7431b74642e830af4d4f4b513ec9.woff) format("woff")}@font-face{font-family:Roboto;font-style:italic;font-display:swap;font-weight:500;src:local("Roboto Medium italic"),local("Roboto-Mediumitalic"),url(/static/roboto-latin-500italic-510dec37fa69fba39593e01a469ee018.woff2) format("woff2"),url(/static/roboto-latin-500italic-ffcc050b2d92d4b14a4fcb527ee0bcc8.woff) format("woff")}@font-face{font-family:Roboto;font-style:normal;font-display:swap;font-weight:700;src:local("Roboto Bold "),local("Roboto-Bold"),url(/static/roboto-latin-700-037d830416495def72b7881024c14b7b.woff2) format("woff2"),url(/static/roboto-latin-700-cf6613d1adf490972c557a8e318e0868.woff) format("woff")}@font-face{font-family:Roboto;font-style:italic;font-display:swap;font-weight:700;src:local("Roboto Bold italic"),local("Roboto-Bolditalic"),url(/static/roboto-latin-700italic-010c1aeee3c6d1cbb1d5761d80353823.woff2) format("woff2"),url(/static/roboto-latin-700italic-846d1890aee87fde5d8ced8eba360c3a.woff) format("woff")}@font-face{font-family:Roboto;font-style:normal;font-display:swap;font-weight:900;src:local("Roboto Black "),local("Roboto-Black"),url(/static/roboto-latin-900-19b7a0adfdd4f808b53af7e2ce2ad4e5.woff2) format("woff2"),url(/static/roboto-latin-900-8c2ade503b34e31430d6c98aa29a52a3.woff) format("woff")}@font-face{font-family:Roboto;font-style:italic;font-display:swap;font-weight:900;src:local("Roboto Black italic"),local("Roboto-Blackitalic"),url(/static/roboto-latin-900italic-7b770d6c53423deb1a8e49d3c9175184.woff2) format("woff2"),url(/static/roboto-latin-900italic-bc833e725c137257c2c42a789845d82f.woff) format("woff")}</style><style data-href="/component---src-pages-index-jsx.c1fbac9ee4e1e3af303a.css">body{margin:0}</style><meta name="generator" content="Gatsby 2.0.76"/><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#2979ff"/><style type="text/css" id="server-side-jss">html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+.jss107 {
+  color: inherit;
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  display: inline-flex;
+  padding: 0;
+  outline: none;
+  position: relative;
+  user-select: none;
+  align-items: center;
+  border-radius: 0;
+  vertical-align: middle;
+  justify-content: center;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.jss107::-moz-focus-inner {
+  border-style: none;
+}
+.jss107.jss108 {
+  cursor: default;
+  pointer-events: none;
+}
+.jss81 {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  min-height: 36px;
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.jss81:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss81.jss101 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss81:hover {
+    background-color: transparent;
+  }
+}
+.jss81:hover.jss101 {
+  background-color: transparent;
+}
+.jss82 {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.jss84 {
+  color: #f5f5f5;
+}
+.jss84:hover {
+  background-color: rgba(245, 245, 245, 0.08);
+}
+@media (hover: none) {
+  .jss84:hover {
+    background-color: transparent;
+  }
+}
+.jss85 {
+  color: #2979ff;
+}
+.jss85:hover {
+  background-color: rgba(41, 121, 255, 0.08);
+}
+@media (hover: none) {
+  .jss85:hover {
+    background-color: transparent;
+  }
+}
+.jss89 {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+.jss90 {
+  color: #f5f5f5;
+  border: 1px solid rgba(245, 245, 245, 0.5);
+}
+.jss90:hover {
+  border: 1px solid #f5f5f5;
+  background-color: rgba(245, 245, 245, 0.08);
+}
+.jss90.jss101 {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss90:hover {
+    background-color: transparent;
+  }
+}
+.jss91 {
+  color: #2979ff;
+  border: 1px solid rgba(41, 121, 255, 0.5);
+}
+.jss91:hover {
+  border: 1px solid #2979ff;
+  background-color: rgba(41, 121, 255, 0.08);
+}
+.jss91.jss101 {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss91:hover {
+    background-color: transparent;
+  }
+}
+.jss92 {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  background-color: #e0e0e0;
+}
+.jss92.jss100 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss92:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss92.jss101 {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jss92:hover {
+  background-color: #d5d5d5;
+}
+@media (hover: none) {
+  .jss92:hover {
+    background-color: #e0e0e0;
+  }
+}
+.jss92:hover.jss101 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jss93 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.jss93:hover {
+  background-color: rgb(171, 171, 171);
+}
+@media (hover: none) {
+  .jss93:hover {
+    background-color: #f5f5f5;
+  }
+}
+.jss94 {
+  color: #fff;
+  background-color: #2979ff;
+}
+.jss94:hover {
+  background-color: #2962ff;
+}
+@media (hover: none) {
+  .jss94:hover {
+    background-color: #2979ff;
+  }
+}
+.jss98 {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  min-width: 0;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+.jss98:active {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss99 {
+  width: auto;
+  height: 48px;
+  padding: 0 16px;
+  min-width: 48px;
+  border-radius: 24px;
+}
+.jss102 {
+  color: inherit;
+}
+.jss103 {
+  width: 40px;
+  height: 40px;
+}
+.jss104 {
+  padding: 7px 8px;
+  min-width: 64px;
+  font-size: 0.8125rem;
+  min-height: 32px;
+}
+.jss105 {
+  padding: 8px 24px;
+  min-width: 112px;
+  font-size: 0.9375rem;
+  min-height: 40px;
+}
+.jss106 {
+  width: 100%;
+}
+.jss30 {
+  margin: 0;
+  display: block;
+}
+.jss31 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 7rem;
+  font-weight: 300;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.14286em;
+  margin-left: -.04em;
+  letter-spacing: -.04em;
+}
+.jss32 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.30357em;
+  margin-left: -.02em;
+  letter-spacing: -.02em;
+}
+.jss33 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.8125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.13333em;
+  margin-left: -.02em;
+}
+.jss34 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.20588em;
+}
+.jss35 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.35417em;
+}
+.jss36 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.3125rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.16667em;
+}
+.jss37 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5em;
+}
+.jss38 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.71429em;
+}
+.jss39 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.46429em;
+}
+.jss40 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.375em;
+}
+.jss41 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+.jss42 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.01562em;
+}
+.jss43 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.00833em;
+}
+.jss44 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: 0em;
+}
+.jss45 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.00735em;
+}
+.jss46 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
+.jss47 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.jss48 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.jss49 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.jss50 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.jss51 {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+.jss52 {
+  text-align: left;
+}
+.jss53 {
+  text-align: center;
+}
+.jss54 {
+  text-align: right;
+}
+.jss55 {
+  text-align: justify;
+}
+.jss56 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.jss57 {
+  margin-bottom: 0.35em;
+}
+.jss58 {
+  margin-bottom: 16px;
+}
+.jss59 {
+  color: inherit;
+}
+.jss60 {
+  color: #f5f5f5;
+}
+.jss61 {
+  color: #2979ff;
+}
+.jss62 {
+  color: rgba(0, 0, 0, 0.87);
+}
+.jss63 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.jss64 {
+  color: #f44336;
+}
+.jss72 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 24px;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}
+.jss73 {
+  color: #f5f5f5;
+}
+.jss74 {
+  color: #2979ff;
+}
+.jss75 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.jss76 {
+  color: #f44336;
+}
+.jss77 {
+  color: rgba(0, 0, 0, 0.26);
+}
+.jss78 {
+  font-size: inherit;
+}
+.jss79 {
+  font-size: 20px;
+}
+.jss80 {
+  font-size: 35px;
+}
+.jss65 {
+  z-index: 1500;
+  opacity: 0.9;
+}
+.jss66 {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: #616161;
+}
+.jss67 {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  line-height: 1.14286em;
+}
+.jss68 {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .jss68 {
+    margin: 0 14px;
+  }
+}
+.jss69 {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .jss69 {
+    margin: 0 14px;
+  }
+}
+.jss70 {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .jss70 {
+    margin: 14px 0;
+  }
+}
+.jss71 {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .jss71 {
+    margin: 14px 0;
+  }
+}
+.jss110 {
+  width: auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.jss111 {
+  height: 80px;
+  margin: 12px;
+  filter: drop-shadow(0 4px 4px hsla(0, 0%, 0%, 0.3));
+}
+@media (max-width: 960px) {
+  .jss111 {
+    height: 64px;
+  }
+}
+.jss112 {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.jss1 {
+  font-family: 'Roboto Mono', Consolas, monospace;
+}
+.jss2 {
+  min-height: 100vh;
+}
+.jss2:first-child {
+  min-height: calc(100vh - 8px);
+  background-color: transparent;
+}
+.jss2:not(:first-child) {
+  box-sizing: border-box;
+  box-shadow: 0 0 8px 0 black;
+  border-top: 8px #2979ff solid;
+  background-color: rgba(245, 245, 245, 0.85);
+}
+.jss3 {
+  margin: 0.5em 0 0.5em;
+  line-height: 150%;
+}
+.jss4 {
+  margin: auto;
+  max-width: 960px;
+}
+.jss5 {
+  padding: 1rem;
+}
+.jss6 {
+  user-select: none;
+}
+.jss7 {
+  color: inherit;
+}
+@media (max-width: 960px) {
+  .jss7 {
+    font-size: 72px;
+  }
+}
+.jss8 {
+  color: inherit;
+}
+@media (max-width: 960px) {
+  .jss8 {
+    font-size: 32px;
+  }
+}
+.jss9 {
+  font-weight: 100;
+}
+.jss10 {
+  font-weight: 300;
+}
+.jss11 {
+  font-weight: 400;
+}
+.jss12 {
+  font-weight: 500;
+}
+.jss13 {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  text-decoration: none;
+}
+.jss13:after {
+  left: 0;
+  width: 0;
+  height: 100%;
+  bottom: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  transition: width .15s cubic-bezier(.5,0,0,1);
+  border-bottom: 0.04em currentColor solid;
+}
+.jss13:hover:after {
+  width: 100%;
+}
+.jss14 {
+  text-align: center;
+}
+.jss15 {
+  color: #2979ff;
+  font-size: 90%;
+  vertical-align: baseline;
+}
+.jss17 {
+  white-space: nowrap;
+}
+.jss18 {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+.jss19 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.jss20 {
+  transform: translate(-50%, -50%);
+}
+.jss21 {
+  white-space: pre-wrap;
+}
+.jss22 {
+  background-color: #f5f5f5;
+}
+.jss23 {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+.jss24 {
+  color: #f5f5f5;
+}
+.jss25 {
+  color: rgba(0, 0, 0, 0.87);
+}
+.jss26 {
+  background-color: #2979ff;
+}
+.jss27 {
+  background-color: #fff;
+}
+.jss28 {
+  color: #2979ff;
+}
+.jss29 {
+  color: #fff;
+}</style><link as="script" rel="preload" href="/app-41b61b04e9a5baad5b86.js"/><link as="script" rel="preload" href="/component---src-pages-index-jsx-bf86c0a48eee374c39d4.js"/><link as="script" rel="preload" href="/7-5355bddc2d6d8fe52146.js"/><link as="script" rel="preload" href="/0-f4c6d4687c07df62145c.js"/><link as="script" rel="preload" href="/webpack-runtime-966176500d1e1b1f100a.js"/><link as="fetch" rel="preload" href="/static/d/173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E.json" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin:0 auto;padding-top:0"><div class="jss1"><section class="jss2  jss19 jss25"><div class="jss5 jss4"><h1 class="jss30 jss31 jss25 jss6 jss9 jss7">Hi.</h1><h1 class="jss30 jss32 jss25 jss6 jss10 jss8"><p>I&#x27;m<!-- --> <span class="jss11"><span title="Jonas Glerup Røssum">Jona<span>s</span></span></span>, a self-taught web application developer based in<!-- --> <strong class="jss11"><span class="jss17"><svg class="jss72 jss15 jss16" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>Copenhagen</span><span>, Denmark</span></strong></p></h1><div class="jss14"><a class="jss107 jss81 jss98 jss92 jss94 jss95 jss97" tabindex="0" role="button" href="#about" title="Read more"><span class="jss82"><svg class="jss72" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><g><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></g></svg></span></a></div></div></section><section id="about" class="jss2 jss19 jss25"><div class="jss5 jss4"><h1 class="jss30 jss32 jss6 jss10 jss8"><p class="jss3">I am passionate about making<!-- --> <strong class="jss11">awesome user experiences</strong> <!-- -->using state-of-the-art open-source libraries, such as:</p><div><div class="jss110"><a class="jss111" target="_blank" rel="noopener noreferrer" title="React" href="https://reactjs.org"><span class="jss112">Visit <!-- -->React</span><svg style="height:100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491 437"><path fill="#61dafb" d="M490.6 218.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V0c-27.5 0-63.5 19.6-99.9 53.6C208.7 19.8 172.7.4 145.2.4v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1C40.5 155.4 0 186.1 0 218.5c0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM245.5 352c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24s9.5 15.8 14.4 23.4zM245 85c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zM80.5 269.1c-35.4-15.1-58.3-34.9-58.3-50.6s22.9-35.6 58.3-50.6c8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM134.3 412c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6z"></path><circle fill="#61dafb" cx="245.2" cy="218.5" r="45.7"></circle></svg></a><a class="jss111" target="_blank" rel="noopener noreferrer" title="Material UI" href="https://www.material-ui.com"><span class="jss112">Visit <!-- -->Material UI</span><svg style="height:100%" viewBox="0 0 600 476.6" xmlns="http://www.w3.org/2000/svg"><path d="m0 259.8v-259.8l225 129.9v86.6l-150-86.6v173.2z" fill="#00b0ff"></path><path d="m225 129.9 225-129.9v259.8l-150 86.6-75-43.3 150-86.6v-86.6l-150 86.6z" fill="#0081cb"></path><path d="m225 303.1v86.6l150 86.6v-86.6z" fill="#00b0ff"></path><path d="m375 476.3 225-129.9v-173.2l-75 43.3v86.6l-150 86.6zm150-346.4v-86.6l75-43.3v86.6z" fill="#0081cb"></path></svg></a><a class="jss111" target="_blank" rel="noopener noreferrer" title="Leaflet" href="https://leafletjs.com"><span class="jss112">Visit <!-- -->Leaflet</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 909.493 241.328" style="height:100%"><path fill="#6f6f6e" d="M138.146 154.633c-16.973 17.26-34.34 25.89-52.1 25.89-5.156 0-10.116-.665-14.878-1.99-4.764-1.323-10.564-3.56-17.402-6.712-6.84-3.15-12.874-5.44-18.1-6.87-9.67 10.6-18.407 15.9-26.212 15.9-2.723 0-4.98-.89-6.768-2.68C.896 176.37 0 174.19 0 171.61c0-5.44 2.667-10.225 8.003-14.34 5.334-4.12 12.872-6.967 22.612-8.54 4.082-5.59 6.695-11.05 7.842-16.386 1.145-5.33 2.04-14.12 2.686-26.37 1.217-25.203 7.966-44.952 20.25-59.24 12.28-14.286 25.62-21.43 40.014-21.43 9.883 0 17.993 3.134 24.33 9.4 6.34 6.267 9.508 14.27 9.508 24.01 0 11.242-3.33 21.09-9.99 29.54s-14.324 12.675-22.988 12.675c-4.512 0-8.057-1.24-10.635-3.71-2.578-2.47-3.867-5.86-3.867-10.15 0-2.22.43-4.8 1.29-7.74 1.933 2.22 4.366 3.33 7.304 3.33 4.86 0 9.13-2.9 12.78-8.7 3.65-5.8 5.48-12.71 5.48-20.74 0-6.16-1.4-11.01-4.19-14.56-2.79-3.55-6.62-5.32-11.48-5.32-5.87 0-10.43 2.11-13.69 6.34s-5.53 9.272-6.82 15.15c-1.29 5.87-2.66 15.36-4.12 28.47-1.46 13.1-3.89 24.72-7.3 34.852-3.42 10.13-9.79 20.065-19.13 29.8 6.09-.43 11.37-.07 15.84 1.08 4.47 1.143 10.88 3.31 19.23 6.495 8.34 3.19 15.52 4.78 21.53 4.78 11.74 0 22.95-6.01 33.62-18.04v12.35zm80.244 0c-9.096 8.953-17.26 15.56-24.492 19.818-7.234 4.26-15.22 6.4-23.955 6.4-9.74 0-17.6-3.11-23.58-9.34-5.98-6.23-8.97-14.43-8.97-24.6 0-15.18 5.265-28.91 15.792-41.19 10.527-12.28 22.2-18.42 35.02-18.42 6.66 0 11.994 1.72 16.006 5.16 4.01 3.44 6.02 7.95 6.02 13.54 0 14.83-15.75 26.86-47.26 36.1 2.87 13.97 10.35 20.95 22.45 20.95 4.73 0 9.24-1.27 13.54-3.81 4.3-2.54 10.78-8.18 19.45-16.92v12.36zM162.1 134.76c18.333-5.156 27.5-14.68 27.5-28.575 0-6.875-2.507-10.313-7.52-10.313-4.726 0-9.237 3.6-13.534 10.796-4.297 7.197-6.445 16.562-6.445 28.092zm171.017 19.873c-11.46 10.887-19.658 17.977-24.6 21.27-4.942 3.293-9.668 4.94-14.18 4.94-11.316 0-16.65-9.99-16.006-29.97-7.16 10.242-13.76 17.797-19.81 22.666-6.05 4.86-12.3 7.3-18.74 7.3-6.3 0-11.65-2.96-16.06-8.87-4.4-5.91-6.6-13.16-6.6-21.75 0-10.75 2.96-20.99 8.87-30.73 5.91-9.74 13.48-17.62 22.72-23.64 9.24-6.02 17.4-9.03 24.49-9.03 8.95 0 15.22 4.12 18.8 12.35l21.96-12.14h6.03l-9.47 31.48c-4.88 15.83-7.32 26.68-7.32 32.55 0 6.15 2.18 9.23 6.55 9.23 2.79 0 5.87-1.49 9.23-4.46 3.36-2.97 8.09-7.5 14.17-13.59v12.36zm-78.633 5.908c7.16 0 13.91-6.1 20.25-18.31 6.337-12.21 9.506-23.47 9.506-33.78 0-4.01-.896-7.14-2.686-9.4-1.79-2.25-4.19-3.38-7.197-3.38-7.162 0-13.948 6.09-20.356 18.27-6.41 12.18-9.61 23.39-9.61 33.63 0 3.87.95 7 2.85 9.4 1.9 2.4 4.31 3.6 7.25 3.6zm165.752-5.9c-7.44 8.38-14.808 14.84-22.104 19.39-7.296 4.55-13.806 6.82-19.53 6.82-2.718 0-6.437-1.03-11.157-3.1-3.02 15.75-5.682 32.76-7.983 51.01-7.456 1.01-16.417 2.55-26.882 4.63 2.29-19.62 6.266-45.08 11.922-76.37-.79-1.36-2.186-4.79-4.19-10.31l-7.195 7.95h-2.47v-9.67l20.478-21.23c3.892-19.21 7.056-33.12 9.492-41.71 2.434-8.59 5.836-18.1 10.205-28.52 4.367-10.42 7.125-16.4 8.27-17.94 1.146-1.54 3.922-3.01 8.326-4.4 4.404-1.39 9.112-2.72 14.126-3.97 5.012-1.25 7.697-1.88 8.057-1.88 2.73 0 4.95 1.77 6.66 5.32 1.72 3.54 2.58 8.21 2.58 14.007 0 10.02-2.64 19.677-7.93 28.977s-15.29 20.74-30 34.334l-9.03 44.9c3.5 7.51 8.76 11.267 15.76 11.267 10.01 0 20.88-7.27 32.6-21.81v12.357zM384.16 93.41c8.372-7.305 14.937-15.164 19.698-23.58 4.76-8.415 7.14-16.168 7.14-23.26 0-3.007-.554-5.478-1.66-7.41-1.107-1.935-2.48-2.9-4.122-2.9-3.142 0-6.338 4.12-9.586 12.36-3.25 8.24-7.073 23.17-11.47 44.79zm107.082 61.23c-9.74 8.95-18.28 15.56-25.62 19.816-7.342 4.26-14.34 6.395-21 6.395-7.665 0-13.842-2.97-18.53-8.91-4.692-5.94-7.037-13.93-7.037-23.95 0-15.04 3.258-33.08 9.775-54.14 6.516-21.05 14.43-40.46 23.74-58.22l27.285-10.1c.86-.28 1.504-.43 1.934-.43 2.07 0 3.77 1.53 5.1 4.57 1.32 3.05 1.98 7.15 1.98 12.3 0 14.61-3.37 28.76-10.1 42.44-6.73 13.68-17.26 28.29-31.58 43.83-.58 7.45-.86 12.57-.86 15.36 0 6.23 1.14 11.17 3.44 14.83 2.29 3.65 5.33 5.48 9.13 5.48 3.87 0 7.98-1.4 12.35-4.19 4.36-2.79 11.02-8.59 19.98-17.4v12.356zM450.1 112.63c9.093-10.11 16.47-21.442 22.128-33.994 5.656-12.55 8.486-23.342 8.486-32.38 0-2.653-.395-4.786-1.182-6.4-.79-1.614-1.79-2.42-3.008-2.42-2.65 0-6.5 6.597-11.548 19.793-5.048 13.19-10.008 31.66-14.877 55.4zm121.493 42.003c-9.096 8.953-17.26 15.56-24.492 19.818-7.23 4.26-15.21 6.4-23.95 6.4-9.74 0-17.6-3.11-23.58-9.34-5.98-6.23-8.97-14.43-8.97-24.6 0-15.18 5.27-28.91 15.79-41.19 10.53-12.28 22.2-18.42 35.02-18.42 6.66 0 12 1.72 16.01 5.16 4.01 3.44 6.02 7.95 6.02 13.54 0 14.83-15.75 26.86-47.26 36.1 2.87 13.97 10.35 20.95 22.45 20.95 4.73 0 9.24-1.27 13.54-3.81 4.3-2.54 10.78-8.18 19.45-16.92v12.36zm-56.29-19.873c18.333-5.156 27.5-14.68 27.5-28.575 0-6.875-2.507-10.313-7.52-10.313-4.726 0-9.237 3.6-13.534 10.796-4.3 7.197-6.45 16.562-6.45 28.092zm118.165 19.873c-9.023 8.953-16.83 15.56-23.418 19.818-6.59 4.26-12.855 6.4-18.8 6.4-6.16 0-11.154-2.59-14.984-7.79-3.832-5.19-5.747-12.01-5.747-20.46 0-7.44 1.83-17.28 5.51-29.5l4.56-16.26-8.25.43 3.44-16.86 10.21-.43 10.08-33.52 28.69-5.89-11.1 37.36 15.17-.86-3.55 16.55-16.67 1.29-7.16 24.07c-2.49 8.37-3.73 15.02-3.73 19.97 0 3.37.84 6.11 2.52 8.23 1.682 2.12 3.85 3.17 6.51 3.17 3.653 0 7.28-1.16 10.86-3.49 3.59-2.32 8.86-7.18 15.82-14.55v12.35z"></path><linearGradient id="a" x1="1603.924" x2="1698.034" y1="1483.083" y2="1483.083" gradientUnits="userSpaceOnUse" gradientTransform="rotate(9.6 9049.018 -4722.716)"><stop offset="0" stop-color="#89C442"></stop><stop offset="1" stop-color="#74B844"></stop></linearGradient><path fill="url(#a)" d="M674.318 92.395c2.234 2.608 46.097 17.218 61.347 34.97 15.25 17.754 21.907 33.598 19.754 48.832-2.15 15.234-11.47 14.982-15.54 20.53-4.07 5.547-9.69 12.388-20.49 11.66-14.14-.948-28.72-8.014-39.25-32.54-10.53-24.527-9.72-47.567-8.88-60.35.84-12.78 3.04-23.102 3.04-23.102z"></path><linearGradient id="b" x1="1606.047" x2="1687.254" y1="1478.166" y2="1478.166" gradientUnits="userSpaceOnUse" gradientTransform="rotate(9.6 1169.206 -709.023)"><stop offset="0" stop-color="#74B844"></stop><stop offset="1" stop-color="#4A9634"></stop></linearGradient><path fill="url(#b)" d="M1239.667 1476.602l65.69 97.927-3.028 3.38" transform="translate(-567.983 -1376)"></path><path fill="#3c3c3b" fill-rule="evenodd" d="M419.922 236.713l.618-4.337c17.52-9.335 39.344-12.934 57.105-21.945 5.328 2.4 7.697-1.06 13.38-.74 2.062 1.86-2.594 4.35 2.974 3.97 12.65 1.68 24.97-.68 37.41-1.74 13.12-1.12 26.15.13 39.02-.63 4.11-.24 10.44-5.93 15.48-3.1 2.28 4.13-7.44 4.49-4.83 9.05 25.76 6.06 90.19 31.68 101.21 3.81.15 1.7-1.93 5.06 1.11 4.59 21.72-9.72 58.63-30.71 65.13-36.21 7.14-6.04 16.66-5.85 26-8 16.82-3.87 34.77-7.81 49.33-16.29 9 6.25 27.84 9.36 37.91 7.18 10.51-2.28 26.82-19.73 35.55-25.9 3.43-2.42 8.45-7.13 12.14-4.46-2.48 1.7.44 6.68-2.6 5.82-1.59-3.04-4.76.47-7.07-.12-8.79 7.21-17.92 13.96-26.88 20.94-4.18 2.57 4.03 5.23-.87 6.07-23.14 4.6-58.38-6.92-72.968 9.07-23.115 7.91-44.98 9.92-67.76 22.2-13.09 7.06-29.108 19.9-42.734 26.65-2.31 1.15-5.693 1.55-8.423 3.23-3.32 2.04-4.136 4.6-6.937 5.204-6.98 1.503-21.4-2.14-30.48-3.46-30.28-4.4-62.61-16.746-91.184-18.31-11.3-.62-24.64 1.17-37.412 1.744-27.15 1.226-44.13 1.87-65.9 9.19-8.9 2.997-22.59 10.93-28.364 6.58z" clip-rule="evenodd"></path><linearGradient id="c" x1="1280.966" x2="1438.704" y1="1562.831" y2="1562.831" gradientUnits="userSpaceOnUse" gradientTransform="rotate(161.46 940.413 -772.15)"><stop offset="0" stop-color="#C1EA71"></stop><stop offset="1" stop-color="#ACDA55"></stop></linearGradient><path fill="url(#c)" d="M839.46 0c-3.05 4.944-72.6 40.807-93.475 74.472-20.873 33.665-26.828 60.172-19.26 85.09 7.566 24.914 22.03 23.792 30.275 32.008 8.246 8.22 19.432 18.193 37.3 14.166 23.395-5.275 45.94-20.89 57.155-64.65 11.214-43.762 3.86-82.083-.88-103.242C845.838 16.687 839.462 0 839.462 0z"></path><linearGradient id="d" x1="1284.556" x2="1422.002" y1="1554.398" y2="1554.398" gradientUnits="userSpaceOnUse" gradientTransform="rotate(161.46 1112.102 -37.725)"><stop offset="0" stop-color="#ACDA55"></stop><stop offset="1" stop-color="#89C442"></stop></linearGradient><path fill="url(#d)" d="M1406.26 1383.39l-84.338 180.893 4.95 4.97" transform="translate(-567.983 -1376)"></path></svg></a></div></div><p class="jss3">Feel free to get in touch via<!-- --> <a class="jss13 jss28" href="mailto:jonas.g.roessum@gmail.com">email</a><span> or </span><a target="_blank" rel="noopener noreferrer" class="jss13 jss28" href="https://twitter.com/jonasroessum">twitter</a><span>!</span></p></h1></div></section></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-pages-index-jsx","jsonName":"index","path":"/"};window.dataPath="173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-41b61b04e9a5baad5b86.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-349a1f419c47edd02cc2.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx.c1fbac9ee4e1e3af303a.css","/component---src-pages-404-jsx-a55c3c9f7071824cadd6.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx.c1fbac9ee4e1e3af303a.css","/component---src-pages-index-jsx-bf86c0a48eee374c39d4.js"],"pages-manifest":["/pages-manifest-7b4a297f35e3fcf6cadd.js"]};/*]]>*/</script><script src="/webpack-runtime-966176500d1e1b1f100a.js" async=""></script><script src="/0-f4c6d4687c07df62145c.js" async=""></script><script src="/7-5355bddc2d6d8fe52146.js" async=""></script><script src="/component---src-pages-index-jsx-bf86c0a48eee374c39d4.js" async=""></script><script src="/app-41b61b04e9a5baad5b86.js" async=""></script></body></html>
