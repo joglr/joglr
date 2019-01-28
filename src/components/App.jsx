@@ -113,14 +113,6 @@ const styles = theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
   },
-  centeredXY: {
-    ...styles.centedX,
-    ...styles.centedY,
-    transform: 'translate(-50%, -50%)',
-  },
-  keepWhiteSpace: {
-    whiteSpace: 'pre-wrap',
-  },
   themePrimary: { backgroundColor: theme.palette.primary.main },
   themePrimaryContrast: { backgroundColor: theme.palette.primary.contrastText },
   themePrimaryText: { color: theme.palette.primary.main },
