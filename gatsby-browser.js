@@ -9,12 +9,6 @@ exports.onServiceWorkerUpdateFound = () => {
   console.log(
     `This application has been updated. Reload to display the latest version.`
   )
-  // const answer = window.confirm(
-  //   `This application has been updated. ` +
-  //     `Reload to display the latest version?`
-  // )
-
-  // if (answer === true) {
-  //   window.location.reload()
-  // }
 }
+
+exports.registerServiceWorker = () => true
