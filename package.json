@@ -36,7 +36,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp static/*.* public",
     "now-build": "npm run build && mv public dist",
     "develop": "gatsby develop",
     "start": "npm run develop",
