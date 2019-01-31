@@ -15,8 +15,7 @@ const About = ({ classes }) => (
       classes.section,
       classes.centeredY,
       classes.themePrimaryContrastText
-    )}
-  >
+    )}>
     <div className={joinClasses(classes.typographyWrapper, classes.container)}>
       <Typography
         variant="display3"
@@ -24,8 +23,7 @@ const About = ({ classes }) => (
           classes.noUserSelect,
           classes.w300,
           classes.display3
-        )}
-      >
+        )}>
         <p className={classes.paragraph}>
           I am passionate about making{' '}
           <strong className={classes.w400}>awesome user experiences</strong>{' '}
@@ -40,8 +38,7 @@ const About = ({ classes }) => (
             className={joinClasses(
               classes.textLink,
               classes.themeSecondaryText
-            )}
-          >
+            )}>
             email
           </ReactGA.OutboundLink>
           <span> or </span>
@@ -53,8 +50,7 @@ const About = ({ classes }) => (
             className={joinClasses(
               classes.textLink,
               classes.themeSecondaryText
-            )}
-          >
+            )}>
             twitter
           </ReactGA.OutboundLink>
           <span>!</span>
