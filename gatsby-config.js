@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title,
     description: `Jonas Røssum is a self-taught web application developer and user experience creator based in Copenhagen, Denmark. `,
-    author: `@jonasroessum`
+    author: `@gatsbyjs`
   },
   plugins: [
     // `gatsby-plugin-react-helmet`,
@@ -37,6 +37,7 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
+    // 'gatsby-plugin-offline'
     'gatsby-plugin-remove-serviceworker'
   ]
 }
