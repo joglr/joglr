@@ -33,7 +33,7 @@ const styles = theme => ({
     },
     '&:not(:first-child)': {
       boxSizing: 'border-box',
-      boxShadow: `0 {theme.spacing.unit}px 0 black`,
+      boxShadow: `0 0 ${theme.spacing.unit}px 0 black`,
       borderTop: `${topBorderSize * theme.spacing.unit}px ${
         theme.palette.secondary.main
       } solid`,
@@ -147,7 +147,7 @@ const App = ({ classes, ReactGA }) => {
               classes.w100,
               classes.display4
             )}>
-            Hi!
+            Hi.
           </Typography>
           <Typography
             variant="display3"
