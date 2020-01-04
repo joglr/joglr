@@ -15,7 +15,7 @@
     "@material-ui/core": "3.4.0",
     "@material-ui/icons": "3.0.1",
     "@material-ui/styles": "^3.0.0-alpha.8",
-    "@wapps/gatsby-plugin-material-ui": "^1.2.0",
+    "@wapps/gatsby-plugin-material-ui": "^1.2.1",
     "cli-real-favicon": "0.0.8",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
