@@ -12,7 +12,7 @@
     "url": "https://github.com/joglr/jonasroessum.git"
   },
   "engines": {
-    "node": "10.x"
+    "node": "12.x"
   },
   "dependencies": {
     "@material-ui/core": "4.9.1",
