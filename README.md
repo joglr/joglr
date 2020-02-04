@@ -1,6 +1,6 @@
 # Jonas Røssum
 
-https://jonasroessum.com
+https://joglr.dev/
 
 New website created 19-04-2018.
 
