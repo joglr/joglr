@@ -40,9 +40,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build && cp static/*.* public",
-    "now-build": "npm run build && mv public dist",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "dev": "gatsby develop",
+    "start": "npm run dev",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "icon": "real-favicon generate graphics/faviconDescription.json graphics/faviconData.json public",
