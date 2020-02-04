@@ -1,8 +1,9 @@
-import { Button, Tooltip, Typography, withStyles } from '@material-ui/core'
+import { Tooltip, Typography, withStyles, Fab } from '@material-ui/core'
 import DownIcon from '@material-ui/icons/KeyboardArrowDownSharp'
 import LocationIcon from '@material-ui/icons/LocationOnSharp'
 import PropTypes from 'prop-types'
 import React from 'react'
+// @ts-ignore
 import pkg from './../../package.json'
 import joinClasses from './../helpers/join-classes'
 import setColorOpacity from './../helpers/set-color-opacity'
@@ -29,12 +30,12 @@ const styles = theme => ({
     minHeight: '100vh',
     '&:first-child': {
       backgroundColor: 'transparent',
-      minHeight: `calc(100vh - ${topBorderSize * theme.spacing.unit}px)`
+      minHeight: `calc(100vh - ${theme.spacing(topBorderSize)}px)`
     },
     '&:not(:first-child)': {
       boxSizing: 'border-box',
-      boxShadow: `0 0 ${theme.spacing.unit}px 0 black`,
-      borderTop: `${topBorderSize * theme.spacing.unit}px ${
+      boxShadow: `${theme.spacing(0, 0, 1, 0)} black`,
+      borderTop: `${theme.spacing(topBorderSize)}px ${
         theme.palette.secondary.main
       } solid`,
       backgroundColor: setColorOpacity(theme.palette.primary.main, 0.85)
@@ -54,16 +55,18 @@ const styles = theme => ({
   noUserSelect: {
     userSelect: 'none'
   },
-  display4: {
+  h1: {
+    fontSize: theme.spacing(14),
     color: 'inherit',
     '@media (max-width: 960px)': {
-      fontSize: 9 * theme.spacing.unit
+      fontSize: theme.spacing(9)
     }
   },
-  display3: {
+  h2: {
+    fontSize: theme.spacing(7),
     color: 'inherit',
     '@media (max-width: 960px)': {
-      fontSize: 4 * theme.spacing.unit
+      fontSize: theme.spacing(4)
     }
   },
   w100: { fontWeight: 100 },
@@ -140,22 +143,22 @@ const App = ({ classes, ReactGA }) => {
         <div
           className={joinClasses(classes.typographyWrapper, classes.container)}>
           <Typography
-            variant="display4"
+            variant="h1"
             className={joinClasses(
               classes.themePrimaryContrastText,
               classes.noUserSelect,
               classes.w100,
-              classes.display4
+              classes.h1
             )}>
             Hi.
           </Typography>
           <Typography
-            variant="display3"
+            variant="h2"
             className={joinClasses(
               classes.themePrimaryContrastText,
               classes.noUserSelect,
               classes.w300,
-              classes.display3
+              classes.h2
             )}>
             <p>
               I'm{' '}
@@ -180,18 +183,17 @@ const App = ({ classes, ReactGA }) => {
           </Typography>
           <div className={classes.textCentered}>
             <Tooltip title="Read more" placement="bottom">
-              <Button
-                color="secondary"
-                variant="fab"
-                component="a"
-                href="#about">
+              <Fab color="secondary" component="a" href="#about">
                 <DownIcon />
-              </Button>
+              </Fab>
             </Tooltip>
           </div>
         </div>
       </section>
-      <About classes={classes} ReactGA={ReactGA} />
+      <About
+        classes={classes}
+        // ReactGA={ReactGA}
+      />
       {typeof window !== 'undefined' && <BackgroundParticles />}
     </div>
   )

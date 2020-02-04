@@ -24,21 +24,20 @@ const technologies = [
 
 const styles = theme => ({
   root: {
-    padding: 2 * theme.spacing.unit,
+    padding: theme.spacing(2),
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     width: 'auto'
   },
   logoLink: {
-    height: 10 * theme.spacing.unit,
-    margin: 1.5 * theme.spacing.unit,
-    filter: `drop-shadow(0 ${theme.spacing.unit / 2}px ${theme.spacing.unit /
-      2}px hsla(0, 0%, 0%, 0.3))`
+    height: theme.spacing(10),
+    margin: theme.spacing(1.5),
+    filter: `drop-shadow(0 ${theme.spacing(0.5, 0.5)} hsla(0, 0%, 0%, 0.3))`
   },
   '@media (max-width: 960px)': {
     logoLink: {
-      height: 8 * theme.spacing.unit
+      height: theme.spacing(8)
     }
   },
   visuallyhidden: {

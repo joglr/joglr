@@ -18,11 +18,11 @@ const About = ({ classes }) => (
     )}>
     <div className={joinClasses(classes.typographyWrapper, classes.container)}>
       <Typography
-        variant="display3"
+        variant="h2"
         className={joinClasses(
           classes.noUserSelect,
           classes.w300,
-          classes.display3
+          classes.h2
         )}>
         <p className={classes.paragraph}>
           I am passionate about making{' '}

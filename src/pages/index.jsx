@@ -1,4 +1,3 @@
-import '../helpers/install-styles'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 // import { Link } from 'gatsby'
 import React from 'react'

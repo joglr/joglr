@@ -29,12 +29,7 @@ module.exports = {
         icon: `graphics/icon.svg` // This path is relative to the root of the site.
       }
     },
-    {
-      resolve: '@wapps/gatsby-plugin-material-ui',
-      options: {
-        pathToTheme: 'src/theme'
-      }
-    },
+    'gatsby-plugin-material-ui',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline'
