@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "name": "jonasroessum",
-  "alias": ["jonasroessum.com", "joglr.dev"],
-  "builds": [{
-    "src": "package.json",
-    "use": "@now/static-build"
-  }]
-}
