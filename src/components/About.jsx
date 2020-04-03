@@ -3,6 +3,7 @@ import React from 'react'
 import ReactGA from 'react-ga'
 import joinClasses from './../helpers/join-classes'
 import Technologies from './Technologies'
+import pkg from './../../package.json'
 
 if (typeof window !== 'undefined') {
   ReactGA.initialize('UA-34976555-1')
@@ -34,7 +35,7 @@ const About = ({ classes }) => (
           Feel free to get in touch via{' '}
           <ReactGA.OutboundLink
             eventLabel="contact.email"
-            to="mailto:jonas.g.roessum@gmail.com"
+            to={`mailto:${pkg.author.email}`}
             className={joinClasses(
               classes.textLink,
               classes.themeSecondaryText
