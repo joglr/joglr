@@ -11,25 +11,14 @@
     "type": "git",
     "url": "https://github.com/joglr/jonasroessum.git"
   },
-  "engines": {
-    "node": "12.x"
-  },
+  "engines": {},
   "dependencies": {
     "@material-ui/core": "4.9.1",
     "@material-ui/icons": "4.9.1",
     "@material-ui/styles": "^4.9.0",
     "cli-real-favicon": "0.0.8",
-    "gatsby": "^2.19.12",
-    "gatsby-image": "^2.2.40",
-    "gatsby-plugin-manifest": "^2.2.41",
-    "gatsby-plugin-material-ui": "^2.1.6",
-    "gatsby-plugin-offline": "^3.0.34",
-    "gatsby-plugin-react-helmet": "^3.1.22",
-    "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sharp": "^2.4.5",
-    "gatsby-source-filesystem": "^2.1.48",
-    "gatsby-transformer-sharp": "^2.3.14",
     "lodash.debounce": "^4.0.8",
+    "next": "^9.4.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -39,8 +28,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build && cp static/*.* public",
-    "dev": "gatsby develop",
+    "build": "next build && cp static/*.* public",
+    "dev": "next dev",
     "start": "npm run dev",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
