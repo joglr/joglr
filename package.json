@@ -28,7 +28,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "next build && cp static/*.* public",
+    "build": "next build",
     "dev": "next dev",
     "start": "npm run dev",
     "format": "prettier --write \"src/**/*.js\"",
