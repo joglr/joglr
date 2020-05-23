@@ -20,14 +20,32 @@ export default function App(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>Home | Jonas Røssum – Web Developer</title>
+        <meta name="description" content=""></meta>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <title>Home | Jonas Røssum – Web Developer</title>
+        <meta
+          name="description"
+          content="Jonas Røssum is a self-taught web application developer and user experience creator based in Copenhagen, Denmark. "
+        />
+        <meta property="og:title" content="Home" />
+        <meta
+          property="og:description"
+          content="Jonas Røssum is a self-taught web application developer and user experience creator based in Copenhagen, Denmark. "
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@jonasroessum" />
+        <meta name="twitter:title" content="Jonas Røssum – Web Developer" />
+        <meta
+          name="twitter:description"
+          content="Jonas Røssum is a self-taught web application developer and user experience creator based in Copenhagen, Denmark. "
+        />
+        <meta name="keywords" content="react. javascript" />
       </Head>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
