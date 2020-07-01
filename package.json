@@ -13,7 +13,7 @@
   },
   "engines": {},
   "dependencies": {
-    "@material-ui/core": "4.9.1",
+    "@material-ui/core": "4.11.0",
     "@material-ui/icons": "4.9.1",
     "@material-ui/styles": "^4.9.0",
     "cli-real-favicon": "0.0.8",
