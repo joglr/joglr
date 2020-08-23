@@ -32,8 +32,7 @@ const styles = theme => ({
   },
   logoLink: {
     height: theme.spacing(10),
-    margin: theme.spacing(1.5),
-    filter: `drop-shadow(0 ${theme.spacing(0.5, 0.5)} hsla(0, 0%, 0%, 0.3))`
+    margin: theme.spacing(1.5)
   },
   '@media (max-width: 960px)': {
     logoLink: {
