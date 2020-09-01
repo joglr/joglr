@@ -38,6 +38,6 @@
     "icon-inject": "real-favicon inject graphics/faviconData.json public public/index.html"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.1"
   }
 }
