@@ -49,7 +49,8 @@ function useReadme(): string {
 
     async function get() {
       const response = await fetch(
-        "https://raw.githubusercontent.com/joglr/joglr/master/README.md"
+        "https://raw.githubusercontent.com/joglr/joglr/master/README.md?cachebust=" +
+          Math.random()
       );
       const result = await response.text();
       if (!canceled) setReadme(result);
