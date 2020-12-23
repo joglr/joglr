@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { linkify } from "./util";
 
 const Root = styled.div`
+  box-sizing: border-box;
   display: grid;
   padding: 32px;
   font-size: 18px;
@@ -14,15 +15,6 @@ const Root = styled.div`
   }
 `;
 
-const ContactInfo = styled.div`
-  text-align: center;
-`;
-
-const Link = styled.a`
-  display: block;
-  color: inherit;
-`;
-
 const Code = styled.code`
   white-space: pre-wrap;
 `;
@@ -32,11 +24,6 @@ function App() {
 
   return (
     <Root>
-      {/* <ContactInfo>
-        <Link href="mailto:hello@joglr.dev">hello@joglr.dev</Link>
-        <Link href="https://github.com/joglr">github.com/joglr</Link>
-      </ContactInfo> */}
-
       <Code>
         <div
           dangerouslySetInnerHTML={{
@@ -44,7 +31,6 @@ function App() {
           }}
         ></div>
       </Code>
-
       <div
         style={{
           textAlign: "center",
