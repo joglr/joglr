@@ -3,7 +3,7 @@
     I'm Jonas Glerup Røssum
     //  jo    gl     r
 
-👨‍💻 I am a Software Developer
+💻 I am a Software Developer
 🌍 I live in Frederiksberg, Denmark 🇩🇰
 🌱 I’m currently learning C# and ASP.net Core
 💬 Ask me about React and Git
@@ -14,7 +14,7 @@
 
 Projects:
 
-- 2020 | [Pladat](https://pladat.joglr.dev/) | Student job platform
-- 2020 | [Bong Maps](https://github.com/bong-inc/bong-maps) | Open source mapping software
-- 2018 | [Ortomatic](https://apps.dronekompagniet.dk/ortomatic/) | Aerial mapping software
-- 2017 | [Tomato Hours](https://tomato-hours.joglr.dev/) | Time tracking
+💼 2020 | [Pladat](https://pladat.joglr.dev/) | Student job platform
+🗺 2020 | [Bong Maps](https://github.com/bong-inc/bong-maps) | Open source mapping software
+✈ 2018 | [Ortomatic](https://apps.dronekompagniet.dk/ortomatic/) | Aerial mapping software
+⏰ 2017 | [Tomato Hours](https://tomato-hours.joglr.dev/) | Time tracking
