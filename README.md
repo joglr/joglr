@@ -10,5 +10,4 @@ I'm Jonas Glerup Røssum, Developer
 - 💬 Ask me about React and Git 
 - 📫 How to reach me: 
   - [hello@joglr.dev](mailto:hello@joglr.dev)
-- 😄 Pronouns: He/him
 - ⚡ Fun fact: I have two free-roam rabbits! 🐇
