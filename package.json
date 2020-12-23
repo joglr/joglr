@@ -5,39 +5,71 @@
     "url": "https://joglr.dev",
     "email": "hello@joglr.dev"
   },
-  "version": "1.4.9",
+  "version": "2.0.0",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/joglr/jonasroessum.git"
   },
-  "engines": {},
   "dependencies": {
-    "@material-ui/core": "4.11.0",
-    "@material-ui/icons": "4.9.1",
-    "@material-ui/styles": "^4.10.0",
-    "cli-real-favicon": "0.0.8",
-    "lodash.debounce": "^4.0.8",
-    "next": "^9.5.1",
-    "next-offline": "^5.0.2",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-ga": "^2.7.0",
-    "react-helmet": "^6.1.0",
-    "typeface-roboto": "0.0.75"
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
+    "@types/jest": "^26.0.19",
+    "@types/node": "^12.19.9",
+    "@types/react": "^16.14.2",
+    "@types/react-dom": "^16.9.10",
+    "gubb": "^0.2.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "styled-components": "^5.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3",
+    "web-vitals": "^0.2.4",
+    "workbox-background-sync": "^5.1.4",
+    "workbox-broadcast-update": "^5.1.4",
+    "workbox-cacheable-response": "^5.1.4",
+    "workbox-core": "^5.1.4",
+    "workbox-expiration": "^5.1.4",
+    "workbox-google-analytics": "^5.1.4",
+    "workbox-navigation-preload": "^5.1.4",
+    "workbox-precaching": "^5.1.4",
+    "workbox-range-requests": "^5.1.4",
+    "workbox-routing": "^5.1.4",
+    "workbox-strategies": "^5.1.4",
+    "workbox-streams": "^5.1.4"
   },
-  "license": "MIT",
   "scripts": {
-    "build": "next build && npm run icon",
-    "dev": "next dev",
-    "start": "npm run dev",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "icon": "real-favicon generate graphics/faviconDescription.json graphics/faviconData.json public",
-    "icon-inject": "real-favicon inject graphics/faviconData.json public public/index.html"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "deno test src/",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "esnext"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "@types/styled-components": "^5.1.7"
   }
 }
