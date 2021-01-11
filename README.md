@@ -7,7 +7,7 @@
 🌍 I live in Frederiksberg, Denmark 🇩🇰
 🌱 I’m currently learning C# and ASP.net Core
 💬 Ask me about React and Git
-⚡ Fun fact: I have two free-roam rabbits 🐇 and I like video games 🎮🕹
+⚡ Fun fact: I have two free-roam rabbits 🐇 and I like video games 🎮
 
 📧 [hello@joglr.dev](mailto:hello@joglr.dev)
 🔗 [github.com/joglr](https://github.com/joglr) &middot; [twitter.com/jonasroessum](https://twitter.com/jonasroessum)
