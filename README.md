@@ -5,7 +5,7 @@
 
 💻 I am a Software Developer
 🌍 I live in Frederiksberg, Denmark 🇩🇰
-🌱 I’m currently learning C# and ASP.net Core
+🌱 I’m currently learning Scrum and distributed ledger technology
 💬 Ask me about React and Git
 ⚡ Fun fact: I have two free-roam rabbits 🐇 and I like video games 🎮
 
