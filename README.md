@@ -15,7 +15,11 @@
 Projects:
 
 💸 2021 | [Pollo Pollo](https://pollopollo.org/) | Decentralized charitable platform
+
 💼 2020 | [Pladat](https://pladat.joglr.dev/) | Student job platform
+
 🗺 2020 | [Bong Maps](https://github.com/bong-inc/bong-maps) | Open source mapping software
+
 ✈ 2018 | [Ortomatic](https://apps.dronekompagniet.dk/ortomatic/) | Aerial mapping software
+
 ⏰ 2017 | [Tomato Hours](https://tomato-hours.joglr.dev/) | Time tracking
