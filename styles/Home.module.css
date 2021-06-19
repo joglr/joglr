@@ -1,0 +1,9 @@
+.root {
+  box-sizing: border-box;
+  display: grid;
+  padding: 32px;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
