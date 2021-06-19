@@ -1,75 +1,33 @@
 {
-  "name": "jonasroessum",
+  "name": "joglr",
   "author": {
     "name": "Jonas Røssum",
     "url": "https://joglr.dev",
     "email": "hello@joglr.dev"
   },
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/joglr/jonasroessum.git"
-  },
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.6.0",
-    "@types/jest": "^26.0.19",
-    "@types/node": "^12.19.9",
-    "@types/react": "^16.14.2",
-    "@types/react-dom": "^16.9.10",
-    "gubb": "^0.2.3",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "styled-components": "^5.2.1",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.3",
-    "web-vitals": "^0.2.4",
-    "workbox-background-sync": "^5.1.4",
-    "workbox-broadcast-update": "^5.1.4",
-    "workbox-cacheable-response": "^5.1.4",
-    "workbox-core": "^5.1.4",
-    "workbox-expiration": "^5.1.4",
-    "workbox-google-analytics": "^5.1.4",
-    "workbox-navigation-preload": "^5.1.4",
-    "workbox-precaching": "^5.1.4",
-    "workbox-range-requests": "^5.1.4",
-    "workbox-routing": "^5.1.4",
-    "workbox-strategies": "^5.1.4",
-    "workbox-streams": "^5.1.4"
+    "url": "https://github.com/joglr/joglr.git"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "deno test src/",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "esnext"
-    }
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "marked": "^2.1.1",
+    "next": "11.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.7"
+    "@types/marked": "^2.0.3",
+    "@types/react": "17.0.11",
+    "eslint": "7.28.0",
+    "eslint-config-next": "11.0.0",
+    "typescript": "4.3.4"
   }
 }

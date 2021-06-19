@@ -1,4 +1,17 @@
 {
   "editor.formatOnSave": true,
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "cSpell.enabled": true,
+  "cSpell.words": [
+    "Glerup",
+    "Kortomatic",
+    "Ortomatic",
+    "Pladat",
+    "Pollo",
+    "R",
+    "Røssum",
+    "joglr",
+    "jonasroessum",
+    "ssum"
+  ]
 }
