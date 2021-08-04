@@ -2,7 +2,7 @@
 
 ```
 I'm Jonas Glerup Røssum
-    jo____gl_____r.dev
+    jo____gl_____r
 ```
 
 ## [About me](#about-me)
