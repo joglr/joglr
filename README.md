@@ -7,7 +7,7 @@ I'm Jonas Glerup Røssum
 
 ## [About me](#about-me)
 
-💻 I am self-taught Software Developer
+💻 I am self-taught Web Developer
 
 📚 I study Software Development at the [IT University of Copenhagen](https://itu.dk)
 
@@ -17,7 +17,7 @@ I'm Jonas Glerup Røssum
 
 💬 Ask me about React and Git
 
-⚡ Fun facts: I have two free-roam rabbits 🐇🐇
+⚡ Fun fact: I have two free-roam rabbits 🐇🐇
 
 ## [Projects](#projects)
 
