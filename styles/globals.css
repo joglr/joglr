@@ -50,6 +50,7 @@ body {
 h1 {
   width: fit-content;
   padding-bottom: var(--u);
+  font-weight: normal;
 }
 
 h1,
