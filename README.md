@@ -21,7 +21,8 @@ I'm Jonas Glerup Røssum
 
 ## [Projects](#projects)
 
-This is an incomplete list of projects that I have collaborated on or made by myself.
+This is an incomplete list of projects that I have either collaborated on or made myself.
+
 
 | &nbsp; | Year | Project                                                 | Description                       |
 | ------ | ---- | ------------------------------------------------------- | --------------------------------- |
