@@ -19,7 +19,9 @@ I'm Jonas Glerup Røssum
 
 ⚡ Fun fact: I have two free-roam rabbits 🐇🐇
 
-## [Projects I've been part of](#projects)
+## [Projects](#projects)
+
+This is an incomplete list of projects that I have collaborated on or made by myself.
 
 | &nbsp; | Year | Project                                                 | Description                       |
 | ------ | ---- | ------------------------------------------------------- | --------------------------------- |
