@@ -24,15 +24,16 @@ I'm Jonas Glerup Røssum
 This is an incomplete list of projects that I have either collaborated on or made myself.
 <br/><br/>
 
-| &nbsp; | Year | Project                                                 | Description                       |
-| ------ | ---- | ------------------------------------------------------- | --------------------------------- |
-| 🔠     | 2022 | [Ordle](https://ordle.joglr.dev/)                       | Danish Wordle clone               |
-| 🐒     | 2021 | [Fruit Rush](https://fruit-rush.joglr.dev/)             | Browser based multiplayer game    |
-| 🐔     | 2021 | [Pollo Pollo](https://pollopollo.org/)                  | Decentralized charitable platform |
-| 💼     | 2020 | [Pladat](https://pladat.joglr.dev/)                     | Student job platform              |
-| 🗺      | 2020 | [Bong Maps](https://github.com/bong-inc/bong-maps)     | Open source mapping software      |
-| 🤖     | 2018 | [Ortomatic](https://apps.dronekompagniet.dk/ortomatic/) | Aerial mapping software           |
-| ⏰     | 2017 | [Tomato Hours](https://tomato-hours.joglr.dev/)         | Time tracking app                 |
+| &nbsp; | Year | Project                                                   | Description                       |
+| ------ | ---- | --------------------------------------------------------- | --------------------------------- |
+| 🚛     | 2022 | [Git Truck](https://git-visual-prototype-1.onrender.com/) | Git repository visualization tool |
+| 🔠     | 2022 | [Ordle](https://ordle.joglr.dev/)                         | Danish Wordle clone               |
+| 🐒     | 2021 | [Fruit Rush](https://fruit-rush.joglr.dev/)               | Browser based multiplayer game    |
+| 🐔     | 2021 | [Pollo Pollo](https://pollopollo.org/)                    | Decentralized charitable platform |
+| 💼     | 2020 | [Pladat](https://pladat.joglr.dev/)                       | Student job platform              |
+| 🗺      | 2020 | [Bong Maps](https://github.com/bong-inc/bong-maps)       | Open source mapping software      |
+| 🤖     | 2018 | [Ortomatic](https://apps.dronekompagniet.dk/ortomatic/)   | Aerial mapping software           |
+| ⏰     | 2017 | [Tomato Hours](https://tomato-hours.joglr.dev/)           | Time tracking app                 |
 
 
 ## [Say hi](#say-hi)
