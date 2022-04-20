@@ -27,7 +27,7 @@ This is an incomplete list of projects that I have either collaborated on or mad
 | &nbsp; | Year | Project                                                   | Description                       |
 | ------ | ---- | --------------------------------------------------------- | --------------------------------- |
 | 🚛     | 2022 | [Git Truck](https://github.com/git-truck/git-truck/)      | Git repository visualization tool |
-| 🔠     | 2022 | [Ordle](https://ordle.joglr.dev/)                         | Danish Wordle clone               |
+| 🔠     | 2022 | [Ordle](https://ordle.app/)                               | Danish Wordle clone               |
 | 🐒     | 2021 | [Fruit Rush](https://fruit-rush.joglr.dev/)               | Browser based multiplayer game    |
 | 🐔     | 2021 | [Pollo Pollo](https://pollopollo.org/)                    | Decentralized charitable platform |
 | 🗺      | 2020 | [Bong Maps](https://github.com/bong-inc/bong-maps)       | Open source mapping software      |
