@@ -13,7 +13,7 @@ I'm Jonas Glerup Røssum
 
 🌍 I live in Frederiksberg, Denmark 🇩🇰
 
-🌱 I’m currently writing my bachelor project
+🌱 I’m currently writing my bachelor project and learning [Remix 💿](https://remix.run/)
 
 💬 Ask me about React and Git
 
