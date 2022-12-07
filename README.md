@@ -26,6 +26,7 @@ This is an incomplete list of projects that I have either collaborated on or mad
 
 | &nbsp; | Year | Project                                                 | Description                                                    |
 | ------ | ---- | ------------------------------------------------------- | -------------------------------------------------------------- |
+| 🟩     | 2022 | [Klods](https://klods.joglr.dev/)                       | Block puzzle game, inspired by similar games                   |
 | 💔     | 2022 | [Broken Hearts](https://broken-hearts.joglr.dev/)       | Dedicated to the people shot every year in U.S. mass shootings |
 | 🚛     | 2022 | [Git Truck](https://github.com/git-truck/git-truck/)    | Git repository visualization tool                              |
 | 🔠     | 2022 | [Ordle](https://ordle.app/)                             | Danish Wordle clone                                            |
