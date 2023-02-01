@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { promises as fs } from 'fs'
-import marked from 'marked'
+import { marked } from 'marked'
 import ThemeSwitch from '../src/ThemeSwitch'
 
 export default function Home({ readme } : { readme: string }) {
