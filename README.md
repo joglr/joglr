@@ -1,5 +1,7 @@
 # Hi there 👋
 
+![Selfportrait](https://github.com/joglr.png)
+
 ```
 I'm Jonas Glerup Røssum
     jo    gl     r
@@ -7,17 +9,17 @@ I'm Jonas Glerup Røssum
 
 ## [About me](#about-me)
 
-💻 I am self-taught Web Developer
+🕸️ I am self-taught Web Developer
 
-📚 I study Software Development at the [IT University of Copenhagen](https://itu.dk)
+📚 Bachelor of Science in Software Development at the [IT University of Copenhagen](https://en.itu.dk)
 
 🌍 I live in Frederiksberg, Denmark 🇩🇰
 
-🌱 I’m currently exploring new opportunities!
+🧠 I’m currently working full-time at [twoday IT-Minds](https://twoday.dk)!
 
-💬 Ask me about React and Git
+❓ Ask me about [React](https://reactjs.org/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Git](https://git-scm.com/)
 
-⚡ Fun fact: I have two free-roam rabbits 🐇🐇
+🐇 Fun fact: I have two free-roam rabbits
 
 ## [Projects](#projects)
 
@@ -36,8 +38,8 @@ This is an incomplete list of projects that I have either collaborated on or mad
 | 🤖     | 2018 | [Ortomatic](https://apps.dronekompagniet.dk/ortomatic/) | Aerial mapping software                                        |
 | ⏰     | 2017 | [Tomato Hours](https://tomato-hours.joglr.dev/)         | Time tracking app                                              |
 
-## [Say hi](#say-hi)
+## [Say hi!](#say-hi)
 
-[hi&commat;joglr.dev](mailto:hi@joglr.dev) &middot;
-[twitter.com/jonasroessum](https://twitter.com/jonasroessum) &middot;
-[github.com/joglr](https://github.com/joglr)
+🐦 [twitter.com/jonasroessum](https://twitter.com/jonasroessum) &middot;
+🐙 [github.com/joglr](https://github.com/joglr) &middot;
+📧 [hi&commat;joglr.dev](mailto:hi&commat;joglr.dev)

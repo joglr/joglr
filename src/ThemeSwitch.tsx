@@ -1,3 +1,4 @@
+import styles from "../styles/ThemeSwitch.module.css"
 import { useEffect, useState } from "react";
 
 function getPrefersLightTheme() {
@@ -40,22 +41,7 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      style={{
-        transition: 'var(--transition)',
-        fontSize: 'calc(4 * var(--u))',
-        position: 'fixed',
-        top: 'calc(2 * var(--u))',
-        right: 'calc(2 * var(--u))',
-        width: 'calc(8 * var(--u))',
-        height: 'calc(8 * var(--u))',
-        borderRadius: '50%',
-        cursor: 'pointer',
-        border: 'none',
-        backgroundColor: 'var(--bg)',
-        // boxShadow: '0 0 var(--u) 0 var(--text)',
-        display: 'grid',
-        placeItems: 'center'
-      }}
+      className={styles.theme_switch}
       onClick={() => setPrefersLightTheme((prev) => !prev)}
       title={`Enable ${prefersLightTheme ? 'dark' : 'light'} theme`}>
       {prefersLightTheme ? "🌜" : "🌞"}

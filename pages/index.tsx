@@ -22,6 +22,8 @@ export default function Home({ readme } : { readme: string }) {
         <div
           style={{
             textAlign: "center",
+            fontSize: "2rem",
+            padding: "3rem",
           }}
         >
           🚀

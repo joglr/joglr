@@ -24,6 +24,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/comic-mono@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/comic-mono/-/comic-mono-4.5.3.tgz#74be41d04fe5a828e510f0b45b3236fbb31ffc14"
+  integrity sha512-5sQvhqC7zFNwsozVRePHEli1Cy+fDVjeFp3xMmWrNs7uwy6FMkxCdWFnDDoPLvUl3whGaGsywa/FcQMDrcy4+Q==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"

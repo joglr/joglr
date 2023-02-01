@@ -35,10 +35,12 @@ body {
   color: var(--text);
   /* font-family: Inter, sans-serif; */
   transition: border-bottom;
+  height: 100%;
 }
 
 body {
-  transition: var(--transition)
+  transition: var(--transition);
+  font-family: 'Comic Mono', monospace;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -48,9 +50,11 @@ body {
 }
 
 h1 {
-  width: fit-content;
-  padding-bottom: var(--u);
+  /* width: fit-content; */
+  /* padding-bottom: var(--u); */
+  margin: 0;
   font-weight: normal;
+  text-align: center;
 }
 
 h1,
@@ -70,7 +74,7 @@ h5::before,
 h6::before {
   content: '## ';
   position: absolute;
-  left: -2em;
+  left: -1.5em;
 }
 h1 a,
 h2 a,
@@ -96,6 +100,14 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+  aspect-ratio: 1;
+  max-width: 100%;
+  border-radius: 50%;
+  margin: calc(2 * var(--u)) auto;
+}
+
 th {
   font-weight: normal;
   font-style: italic;
@@ -109,4 +121,13 @@ th, td {
   text-align: left;
   padding-left: var(--u);
   padding-right: var(--u);
+}
+
+pre {
+  width: max-content;
+  margin: auto;
+}
+
+code {
+  font-family: 'Comic Mono', monospace;
 }
