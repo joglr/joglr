@@ -37,6 +37,8 @@ export default function ThemeSwitch() {
   useEffect(() => {
     setCSS("--bg", getCSS(prefersLightTheme ? "--light" : "--dark"));
     setCSS("--text", getCSS(prefersLightTheme ? "--lightText" : "--darkText"));
+    setCSS("--textHeading", getCSS(prefersLightTheme ? "--lightTextHeading" : "--darkTextHeading"));
+    setCSS("--textEmphasis", getCSS(prefersLightTheme ? "--lightTextEmphasis" : "--darkTextEmphasis"));
   }, [prefersLightTheme]);
 
   return (

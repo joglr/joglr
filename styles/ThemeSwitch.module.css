@@ -1,11 +1,11 @@
 .theme_switch {
   transition: var(--transition);
-  font-size: calc(4 * var(--u));
+  font-size: var(--u4);
   position: fixed;
-  top: calc(2 * var(--u));
-  right: calc(2 * var(--u));
-  width: calc(8 * var(--u));
-  height: calc(8 * var(--u));
+  top: var(--u2);
+  right: var(--u2);
+  width: var(--u8);
+  height: var(--u8);
   border-radius: 50%;
   cursor: pointer;
   border: none;

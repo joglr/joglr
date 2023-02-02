@@ -1,10 +1,7 @@
 .root {
   box-sizing: border-box;
   display: grid;
-  padding: calc(var(--u) * 6);
-  padding-right: var(--unit);
-  font-size: 18px;
+  padding: var(--u2) var(--u2);
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
