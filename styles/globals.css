@@ -1,33 +1,40 @@
 :root {
-  --light: hsl(0deg 0% 95%);
-  --lightText: hsla(0deg 0% 11%);
+  --light: hsl(0deg 0% 90%);
+  --lightText: hsl(0deg 0% 11%);
+  --lightTextHeading: hsl(0deg 0% 11%);
+  --lightTextEmphasis: black;
 
   --dark: hsl(0deg 0% 11%);
-  --darkText: hsla(0deg 0% 85%);
+  --darkText: hsla(0deg 0% 80%);
+  --darkTextHeading: hsla(0deg 0% 80%);
+  --darkTextEmphasis: white;
 
   --bg: var(--dark);
   --text: var(--darkText);
-  --u: 8px;
-  --transition:
-    background-color 1s ease-out,
-    color 1s ease-out;
+  --textEmphasis: var(--darkTextEmphasis);
+  --textHeading: var(--darkTextHeading);
+
+  --u1: 8px;
+  --u2: calc(2 * var(--u1));
+  --u4: calc(4 * var(--u1));
+  --u8: calc(8 * var(--u1));
+  --u16: calc(16 * var(--u1));
+  --u32: calc(32 * var(--u1));
+  --transition: background-color 500ms ease-in-out;
+  /* ,color 1s ease; */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg: var(--light);
     --text: var(--lightText);
+    --textHeading: var(--lightTextHeading);
+    --textEmphasis: var(--lightTextEmphasis);
   }
-}
-
-* {
-  box-sizing: border-box;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -38,7 +45,8 @@ body {
 }
 
 body {
-  transition: var(--transition)
+  transition: var(--transition);
+  font-family: "Comic Mono", monospace;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -47,10 +55,15 @@ body {
   }
 }
 
-h1 {
-  width: fit-content;
-  padding-bottom: var(--u);
-  font-weight: normal;
+a  {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px var(--text) dashed;
+}
+a:hover {
+  color: var(--textEmphasis);
+  border-bottom-style: solid;
 }
 
 h1,
@@ -60,40 +73,47 @@ h4,
 h5,
 h6 {
   position: relative;
+  margin: var(--u8) 0 var(--u1);
+  color: var(--textHeading);
+  font-weight: 400;
 }
 
-/* h1::before, */
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
-  content: '## ';
-  position: absolute;
-  left: -2em;
+h1 {
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  color: var(--text);
 }
+
 h1 a,
 h2 a,
 h3 a,
 h4 a,
 h5 a,
-h7 a {
-  padding-bottom: var(--u);
-  /* display: block; */
-}
-a {
+h6 a {
+  display: block;
+  font-weight: inherit;
   color: inherit;
-  font-weight: bold;
-  text-decoration: none;
-  border-bottom: 1px transparent solid;
-}
-a:hover {
-  border-bottom-color: 1px var(--text) solid;
-  border-bottom-style: dashed;
 }
 
-p {
-  margin: 0;
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  display: block;
+  font-weight: inherit;
+  color: inherit;
+}
+
+
+img {
+  display: block;
+  aspect-ratio: 1;
+  max-width: 100%;
+  border-radius: 50%;
+  margin: calc(2 * var(--u1)) auto;
 }
 
 th {
@@ -105,8 +125,26 @@ thead tr {
   border-bottom: 1px var(--text) solid;
 }
 
-th, td {
+td:first-child {
+  min-width: var(--u4)
+}
+
+/* Year column */
+td:nth-child(2) {
+  min-width: var(--u8);
+}
+
+th,
+td {
   text-align: left;
-  padding-left: var(--u);
-  padding-right: var(--u);
+  vertical-align: baseline;
+}
+
+pre {
+  width: max-content;
+  margin: auto;
+}
+
+code {
+  font-family: "Comic Mono", monospace;
 }

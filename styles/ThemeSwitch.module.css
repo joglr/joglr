@@ -1,0 +1,16 @@
+.theme_switch {
+  transition: var(--transition);
+  font-size: var(--u4);
+  position: fixed;
+  top: var(--u2);
+  right: var(--u2);
+  width: var(--u8);
+  height: var(--u8);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: var(--bg);
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
