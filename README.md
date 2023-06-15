@@ -29,7 +29,7 @@ This is an incomplete list of projects that I have either collaborated on or mad
 | &nbsp; | Year | Project                                                 | Description                                              |
 | ------ | ---- | ------------------------------------------------------- | -------------------------------------------------------- |
 | 🎛️     | 2023 | [Takt](https://takt.joglr.dev/)                       | A simple React app for making beats                   |
-| 🧍     | 2023 | [Stretch](https://stretch.joglr.dev/)                   | A simple Vue 3 app helping you with stretching exercises |
+| 🧍     | 2023 | [Stræk](https://straek.joglr.dev/)                   | A simple Vue 3 app helping you with stretching exercises |
 | 🧶     | 2023 | [Pind](https://pind.joglr.dev/)                         | Knitting project helper                                  |
 | 🟩     | 2022 | [Klods](https://klods.joglr.dev/)                       | Block puzzle game clone                                  |
 | 🚛     | 2022 | [Git Truck](https://github.com/git-truck/git-truck/)    | Git repository visualization tool                        |
