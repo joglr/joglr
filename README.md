@@ -15,7 +15,7 @@ I'm Jonas Glerup Røssum
 
 🌍 I live in Frederiksberg, Denmark 🇩🇰
 
-🧠 I’m currently working full-time at [twoday IT-Minds](https://it-minds.dk/forside)!
+🧠 I’m currently studying a MSc. in Computer Science at the [IT University of Copenhagen](https://en.itu.dk) 
 
 ❓ Ask me about [React](https://reactjs.org/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Git](https://git-scm.com/)
 
