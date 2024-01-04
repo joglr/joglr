@@ -1,6 +1,6 @@
 # Hello there 👋
 
-![Selfportrait](https://github.com/joglr.png)
+![Jonas Glerup Røssum](https://github.com/joglr.png)
 
 ```
 I'm Jonas Glerup Røssum
@@ -11,11 +11,13 @@ I'm Jonas Glerup Røssum
 
 🕸️ I am self-taught Web Developer
 
+📚 Studying MSc in Computer Science at the [IT University of Copenhagen](https://en.itu.dk)
+
 📚 BSc. in Software Development at the [IT University of Copenhagen](https://en.itu.dk)
 
 🌍 I live in Frederiksberg, Denmark 🇩🇰
 
-🧠 I’m currently studying a MSc. in Computer Science at the [IT University of Copenhagen](https://en.itu.dk) 
+🧠 I’m currently studying a MSc. in Computer Science at the [IT University of Copenhagen](https://en.itu.dk)
 
 ❓ Ask me about [React](https://reactjs.org/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Git](https://git-scm.com/)
 
