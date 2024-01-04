@@ -11,9 +11,9 @@ I'm Jonas Glerup Røssum
 
 🕸️ I am self-taught Web Developer
 
-📚 Studying MSc in Computer Science at the [IT University of Copenhagen](https://en.itu.dk)
+📚 Studying a MSc. in Computer Science at the [IT University of Copenhagen](https://en.itu.dk)
 
-📚 BSc. in Software Development at the [IT University of Copenhagen](https://en.itu.dk)
+✅ BSc. in Software Development at the [IT University of Copenhagen](https://en.itu.dk)
 
 🌍 I live in Frederiksberg, Denmark 🇩🇰
 
