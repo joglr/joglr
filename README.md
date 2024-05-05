@@ -37,6 +37,7 @@ This is an incomplete list of projects that I have either collaborated on or mad
 | 🚛     | 2022 | [Git Truck](https://github.com/git-truck/git-truck/)    | Git repository visualization tool                        |
 | 🔠     | 2022 | [Ordle](https://ordle.joglr.dev/)                       | Danish Wordle clone                                      |
 | 🐒     | 2021 | [Fruit Rush](https://fruit-rush.joglr.dev/)             | Browser based multiplayer game                           |
+| 🦅     | 2021 | [Plummet](https://plummet.joglr.dev/)                    | Browser based singleplayer game                         |
 | 🗺      | 2020 | [Bong Maps](https://github.com/bong-inc/bong-maps)      | Open source mapping software                             |
 | 🤖     | 2018 | [Ortomatic](https://apps.dronekompagniet.dk/ortomatic/) | Aerial mapping software                                  |
 | ⏰     | 2017 | [Tomato Hours](https://tomato-hours.joglr.dev/)         | Time tracking app                                        |
