@@ -1,11 +1,8 @@
 # Hello there 👋
 
-![Jonas Glerup Røssum](https://github.com/joglr.png)
+![Jonas Røssum](https://github.com/joglr.png)
 
-```
-I'm Jonas Glerup Røssum
-    jo -  gl  -  r
-```
+I'm Jonas Røssum
 
 ## [About me](#about-me)
 
