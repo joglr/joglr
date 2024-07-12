@@ -18,7 +18,7 @@ I'm Jonas Røssum
 
 ❓ Ask me about [React](https://reactjs.org/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Git](https://git-scm.com/)
 
-🐇 Fun fact: I have two free-roam rabbits
+🐇 Fun fact: I have a free-roam rabbit
 
 ## [Projects](#projects)
 
