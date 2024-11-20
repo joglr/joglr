@@ -16,7 +16,7 @@ I'm Jonas Røssum
 
 🌍 I live in Frederiksberg, Denmark 🇩🇰
 
-❓ Ask me about [React](https://reactjs.org/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Git](https://git-scm.com/)
+❓ Ask me about [React](https://react.dev/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Git](https://git-scm.com/)
 
 🐇 Fun fact: I have a free-roam rabbit
 
