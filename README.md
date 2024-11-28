@@ -41,5 +41,5 @@ This is an incomplete list of projects that I have either collaborated on or mad
 
 ## [Say hi!](#say-hi)
 
-🦋 [bsky.app/profile/joglr.bsky.social](https://bsky.app/profile/joglr.bsky.social))(https://twitter.com/jonasnimroessum) &middot;
+🦋 [bsky.app/profile/joglr.bsky.social](https://bsky.app/profile/joglr.bsky.social) &middot;
 🐙 [github.com/joglr](https://github.com/joglr)
