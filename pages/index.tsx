@@ -9,10 +9,10 @@ export default function Home({ readme }: { readme: string }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Jonas Glerup Røssum - Software Developer</title>
+        <title>Jonas Nin Røssum - Software Developer</title>
         <meta
           name="description"
-          content="Jonas Glerup Røssum - Software Developer"
+          content="Jonas Nim Røssum - Software Developer"
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
