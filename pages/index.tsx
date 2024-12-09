@@ -9,7 +9,7 @@ export default function Home({ readme }: { readme: string }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Jonas Nin Røssum - Software Developer</title>
+        <title>Jonas Nim Røssum - Software Developer</title>
         <meta
           name="description"
           content="Jonas Nim Røssum - Software Developer"
