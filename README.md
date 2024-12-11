@@ -1,6 +1,6 @@
 # Hello there 👋
 
-![Jonas Røssum](https://github.com/joglr.png)
+![Jonas Røssum](https://github.com/nimrossum.png)
 
 I'm Jonas Røssum
 
