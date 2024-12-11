@@ -29,7 +29,7 @@ This is an incomplete list of projects that I have either collaborated on or mad
 | 🧍     | 2023 | [Stræk](https://straek.nimrossum.com/)                  | A simple Vue 3 app helping you with stretching exercises |
 | 🧶     | 2023 | [Pind](https://pind.nimrossum.com/)                     | Knitting project helper                                  |
 | 🟩     | 2022 | [Klods](https://klods.nimrossum.com/)                   | Block puzzle game clone                                  |
-| 🚛     | 2022 | [Git Truck](https://github.com/git-truck/git-truck/)    | Git repository visualization tool                        |
+| 🚛     | 2022 | [Git Truck](https://git-truck.github.io/git-truck/GitTruckTeaser)    | Git repository visualization tool                        |
 | 🔠     | 2022 | [Ordle](https://ordle.nimrossum.com/)                   | Danish Wordle clone                                      |
 | 🐒     | 2021 | [Fruit Rush](https://fruit-rush.nimrossum.com/)         | Browser based multiplayer game                           |
 | 🦅     | 2021 | [Dyk](https://dyk.nimrossum.com/)                       | Browser based singleplayer game                          |
