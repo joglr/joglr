@@ -39,5 +39,5 @@ This is an incomplete list of projects that I have either collaborated on or mad
 
 ## [Say hi!](#say-hi)
 
-🦋 [bsky.app/profile/jonas.nimrossum.com](https://bsky.app/profile/jonas.nimrossum.com) &middot;
+🦋 [bsky.app/profile/nimrossum.com](https://bsky.app/profile/nimrossum.com) &middot;
 🐙 [github.com/nimrossum](https://github.com/nimrossum)
